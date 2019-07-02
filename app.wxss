@@ -1,0 +1,9 @@
+/**app.wxss**/
+.card{
+  width:100%;
+  height: auto;
+  padding: 20rpx;
+  border-radius: 20rpx;
+  background: #ffffff;
+  box-shadow:-2px 3px 6px #ebebeb, 2px 3px 6px #ebebeb;
+}
