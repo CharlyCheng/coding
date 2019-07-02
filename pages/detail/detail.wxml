@@ -1,0 +1,7 @@
+<!--pages/my/my.wxml-->
+<van-row>
+  <van-col span="24">
+    <view class="card">xxx
+    </view>
+  </van-col>
+</van-row>
