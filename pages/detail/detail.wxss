@@ -1,1 +1,9 @@
-/* pages/my/my.wxss */
+/* pages/detail/detail.wxss */
+.card {
+    width:100%;
+    height:auto;
+    background:#ffffff;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}

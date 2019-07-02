@@ -1,7 +1,125 @@
-<!--pages/my/my.wxml-->
+<!--pages/detail/detail.wxml-->
 <van-row>
   <van-col span="24">
-    <view class="card">xxx
+    <view class="card">
+      <swiper 
+        indicator-dots="{{indicatorDots}}"
+        autoplay="{{autoplay}}" 
+        interval="{{interval}}" 
+        duration="{{duration}}">
+        <block wx:for="{{imgUrls}}">
+          <swiper-item>
+            <image src="{{item}}" class="slide-image" width="355" height="150"/>
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+    <view>
+      <view class="card">
+        <Text>北京直升机遨游八达岭长城&奥林匹克公园一日游</Text>
+        <Text>游八达岭长城，了解奥林匹克精神</Text>
+      </view>
+      <view class="card">
+        <view class="card">
+          <view><Text>￥1420</Text><Text>1550</Text></view>
+          <view>BINGO缤果低价保证</view>
+        </view>
+        <view class="card">
+          分享logo
+        </view>
+      </view>
+    </view>
+    <view>
+        <view class="card">
+          多少人参加
+        </view>
+        <view class="card">
+          最早可预订日期：07月01日
+        </view>
+    </view>
+    <view class="card">
+      <view class="card">
+        24小时内确认订单
+      </view>
+      <view class="card">
+        24小时内确认订单
+      </view>
+      <view class="card">
+        24小时内确认订单
+      </view>
+      <view class="card">
+        24小时内确认订单
+      </view>
+      <view class="card">
+        24小时内确认订单
+      </view>
+    </view>
+    <view class="card">
+      <view class="card">
+        四人包车，专业的司机和导游服务
+      </view>
+      <view class="card">
+        四人包车，专业的司机和导游服务
+      </view>
+      <view class="card">
+        四人包车，专业的司机和导游服务
+      </view>
+    </view>
+    <view class="card">
+      <view class="card">
+        套餐选项
+      </view>
+      <view class="card">
+        四人包车，专业的司机和导游服务
+      </view>
+      <view class="card">
+        四人包车，专业的司机和导游服务
+      </view>
+    </view>
+    <view>
+      <view class="card">
+        活动概览
+      </view>
+      <view class="card">
+        四人包车，专业的司机和导游服务
+      </view>
+      <view class="card">
+        四人包车，专业的司机和导游服务
+      </view>
+    </view>
+    <view>
+      <view class="card">
+        预订须知
+      </view>
+      <view class="card">
+        四人包车，专业的司机和导游服务
+      </view>
+      <view class="card">
+        四人包车，专业的司机和导游服务
+      </view>
+    </view>
+    <view>
+      <view class="card">
+        如何使用
+      </view>
+      <view class="card">
+        四人包车，专业的司机和导游服务
+      </view>
+      <view class="card">
+        四人包车，专业的司机和导游服务
+      </view>
+    </view>
+    <view>
+      <view class="card">
+        退改须知
+      </view>
+      <view class="card">
+        四人包车，专业的司机和导游服务
+      </view>
+      <view class="card">
+        四人包车，专业的司机和导游服务
+      </view>
     </view>
   </van-col>
 </van-row>
+

@@ -1,14 +1,15 @@
 {
-  "pages":[
+  "pages": [
+    "pages/detail/detail",
     "pages/my/my",
     "pages/index/index",
     "pages/logs/logs"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle":"black"
+    "navigationBarTextStyle": "black"
   },
   "tabBar": {
     "list": [
@@ -19,11 +20,16 @@
       {
         "pagePath": "pages/my/my",
         "text": "我的"
+      },
+      {
+        "pagePath": "pages/detail/detail",
+        "text": "商品详情"
       }
     ]
   },
   "usingComponents": {
     "van-row": "vant/row/index",
     "van-col": "vant/col/index"
-  }
+  },
+  "sitemapLocation": "sitemap.json"
 }
