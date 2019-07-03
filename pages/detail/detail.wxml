@@ -16,7 +16,7 @@
       </swiper>
     </view>
     <view class='normal_style head_info'>
-      <view class="con_head">
+      <view class="con_head border_bttom">
         <h1>【夏日限定】維瓦爾第水上樂園 & 斜坡滑車 & 綿羊牧場 & 空中鞦韆一日遊（首爾出發）</h1>
         <view>
           <h3>游八达岭长城，了解奥林匹克精神</h3>
@@ -25,59 +25,93 @@
             <span class="price_now">171</span>
             <span class="price_before">177</span>
           </view>
-          <view>BINGO缤果低价保证</view>
-          <view>
+          <view class='price_guarantee'>BINGO  缤果低价保证 </view>
+          <!-- <view>
             分享logo
-          </view>
+          </view> -->
         </view>
       </view>
-    </view>
-    <view>
-        <view class="card">
-          多少人参加
+      <view class="keynote border_bttom">
+        <view class="note_des">
+          <span class="klook-icon-people"></span>
+          <p>166 人參加過</p>
         </view>
-        <view class="card">
-          最早可预订日期：07月01日
+        <view class="note_des">
+          <span class="klook-icon-time"></span>
+          <p class="j_card_date notice">最早可預訂日期：明日</p>
         </view>
+      </view>
+      <view class="border_bttom">
+        <div class="act_icons">
+          <div class="flex_vc">
+              <svg class="klk_c_symbol klook-symbol act_icons__icon" aria-hidden="true">
+                  <use xlink:href="#icon-fast"></use>
+              </svg>
+              <p>立即確認並獲得憑證	</p>
+          </div>
+          <div class="flex_vc">
+              <svg class="klk_c_symbol klook-symbol act_icons__icon" aria-hidden="true">
+                  <use xlink:href="#icon-cancelation_type"></use>
+              </svg>
+              <p>行程前48小時可退改</p>
+          </div>
+          <div class="flex_vc">
+              <svg class="klk_c_symbol klook-symbol act_icons__icon" aria-hidden="true">
+                  <use xlink:href="#icon-voucher_usage"></use>
+              </svg>
+              <p>可出示手機電子憑證或列印的紙本憑證</p>
+          </div>
+          <div class="flex_vc">
+              <svg class="klk_c_symbol klook-symbol act_icons__icon" aria-hidden="true">
+                  <use xlink:href="#icon-duration_range"></use>
+              </svg>
+              <p>行程時長：11小時	30分鐘	 - 12小時	50分鐘	</p>
+          </div>
+          <div class="flex_vc">
+              <svg class="klk_c_symbol klook-symbol act_icons__icon" aria-hidden="true">
+                  <use xlink:href="#icon-language_desc"></use>
+              </svg>
+              <p>英文 / 中文 / 韓語</p>
+          </div>
+          <div class="flex_vc">
+              <svg class="klk_c_symbol klook-symbol act_icons__icon" aria-hidden="true">
+                  <use xlink:href="#icon-group_type"></use>
+              </svg>
+              <p>湊團導覽</p>
+          </div>
+          <div class="flex_vc">
+              <svg class="klk_c_symbol klook-symbol act_icons__icon" aria-hidden="true">
+                  <use xlink:href="#icon-transport_type"></use>
+              </svg>
+              <p>自行前往指定地點會合導遊	</p>
+          </div>
+        </div>
+      </view>
+      <view class="border_bttom">
+        <div class="high_light mark_down">
+          <ul>
+            <li>一日暢玩韓國人氣設施，炎炎夏日在亞洲第二的水上樂園盡情享受各種水上設施</li>
+            <li>冬季滑雪道在夏季搖身一變，成了刺激趣味的Luge斜坡滑道</li>
+            <li>綿羊牧場體驗餵食小羊，樂趣互動五星好評</li>
+            <li>乘坐空中鞦韆，俯瞰腳下旖旎景色，感受微風吹拂的愜意</li>
+          </ul>
+        </div>
+      </view>
     </view>
-    <view class="card">
-      <view class="card">
-        24小时内确认订单
-      </view>
-      <view class="card">
-        24小时内确认订单
-      </view>
-      <view class="card">
-        24小时内确认订单
-      </view>
-      <view class="card">
-        24小时内确认订单
-      </view>
-      <view class="card">
-        24小时内确认订单
-      </view>
-    </view>
-    <view class="card">
-      <view class="card">
-        四人包车，专业的司机和导游服务
-      </view>
-      <view class="card">
-        四人包车，专业的司机和导游服务
-      </view>
-      <view class="card">
-        四人包车，专业的司机和导游服务
-      </view>
-    </view>
-    <view class="card">
-      <view class="card">
-        套餐选项
-      </view>
-      <view class="card">
-        四人包车，专业的司机和导游服务
-      </view>
-      <view class="card">
-        四人包车，专业的司机和导游服务
-      </view>
+    <view class="normal_style pac_info">
+      <div id="pac_info_head" class="block_head">方案選擇</div>
+      <div class="pac_info__content">
+        <div class="pac_info__specs">
+          
+        </div> 
+        <div class="act_schedule">
+          <div class="act_schedule__main">
+            <svg aria-hidden="true" class="klk_c_symbol klook-symbol act_schedule__icon_calendar"><use xlink:href="#icon-calendar"></use></svg> 
+            <span class="act_schedule__date">查看可預訂日期</span>
+          </div>
+          <svg aria-hidden="true" class="klk_c_symbol klook-symbol act_schedule__icon_arrow"><use xlink:href="#icon-arrow-right"></use></svg>
+        </div>
+      </div>
     </view>
     <view>
       <view class="card">
