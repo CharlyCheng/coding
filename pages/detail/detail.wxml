@@ -73,7 +73,7 @@
           </div>
         </div>
       </view>
-      <view class="border_bttom">
+      <view class="high_light_content border_bttom">
         <div class="high_light mark_down">
           <ul>
             <li>一日暢玩韓國人氣設施，炎炎夏日在亞洲第二的水上樂園盡情享受各種水上設施</li>
@@ -84,6 +84,7 @@
         </div>
       </view>
     </view>
+    <view class="back_gd"></view>
     <view class="normal_style pac_info">
       <view>
         <div id="pac_info_head" class="block_head">方案選擇</div>
@@ -95,14 +96,15 @@
             <span class="pac_info_spec__attr">日本环球影城1日门票 - 票价A  |  日本环球影城1日门票 - 票价B  |  日本环球影城1日门票 - 票价C</span>
           </div>
         </div>
+        <div class="pac_info_right"></div>
       </view>
-      <!-- <div class="act_schedule">
+      <view class="act_schedule">
+        <div class="schedule_image"></div>
         <div class="act_schedule__main">
-          <svg aria-hidden="true" class="klk_c_symbol klook-symbol act_schedule__icon_calendar"><use xlink:href="#icon-calendar"></use></svg> 
           <span class="act_schedule__date">查看可預訂日期</span>
         </div>
-        <svg aria-hidden="true" class="klk_c_symbol klook-symbol act_schedule__icon_arrow"><use xlink:href="#icon-arrow-right"></use></svg>
-      </div> -->
+        <div class="act_icon_right"></div>
+      </view>
     </view>
   </van-col>
 </van-row>
