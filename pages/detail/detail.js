@@ -57,6 +57,21 @@ Page({
     Toast('点击按钮');
   },
   //获取详情页面数据
+  getGoodDetail() {
+    wx.request({
+      url: 'test.php',
+      data: {
+        x: '',
+        y: ''
+      },
+      header: {
+        'content-type': 'application/json' // 默认值
+      },
+      success (res) {
+        console.log(res.data)
+      }
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */

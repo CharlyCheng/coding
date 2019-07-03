@@ -26,7 +26,7 @@
             <span class="price_before">177</span>
           </view>
           <view class='price_guarantee'>
-            BINGO  缤果低价保证   <span  bindtap="showTip">提示loggogologo</span>
+            BINGO  缤果低价保证   <span  bindtap="showTip">提示tip</span>
           </view>
           <view class="price_logo_tip">
             分享logo
@@ -36,11 +36,11 @@
       <view class="keynote border_bttom">
         <view class="note_des">
           <span class="klook-icon-people"></span>
-          <p>166 人參加過</p>
+          <p>166 人參加过</p>
         </view>
         <view class="note_des">
           <span class="klook-icon-time"></span>
-          <p class="j_card_date notice">最早可預訂日期：明日</p>
+          <p class="j_card_date notice">最早可预订日期：明日</p>
         </view>
       </view>
       <view class="border_bttom">
@@ -54,8 +54,12 @@
               <p>随时退、有条件退、不支持退款</p>
           </div>
           <div class="flex_vc">
+              <div class="bg_image7"></div>
+              <p>自行前往指定地點會合導遊	</p>
+          </div>
+          <!-- <div class="flex_vc">
               <div class="bg_image3"></div>
-              <p>可出示手机电子凭证或打印凭证、必须提前兑换实体票券</p>
+              <p>可出示手机电子凭证或打印凭证</p>
           </div>
           <div class="flex_vc">
               <div class="bg_image4"></div>
@@ -68,11 +72,7 @@
           <div class="flex_vc">
               <div class="bg_image6"></div>
               <p>湊團導覽</p>
-          </div>
-          <div class="flex_vc">
-              <div class="bg_image7"></div>
-              <p>自行前往指定地點會合導遊	</p>
-          </div>
+          </div> -->
         </div>
       </view>
       <view class="high_light_content border_bttom">
@@ -103,7 +103,7 @@
       <view class="act_schedule">
         <div class="schedule_image"></div>
         <div class="act_schedule__main">
-          <span class="act_schedule__date">查看可預訂日期</span>
+          <span class="act_schedule__date">查看可预订日期</span>
         </div>
         <div class="act_icon_right"></div>
       </view>
