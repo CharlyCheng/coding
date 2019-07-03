@@ -121,13 +121,20 @@
         </view>
       </view>
     </view>
-    <view class="normal_style pac_info ter_con">
+    <view class="back_gd"></view>
+    <view class="normal_style pac_info faq">
       <view>
-        <div id="pac_info_head" class="block_head">退改须知</div>
+        <div id="pac_info_head" class="block_head">预定须知</div>
       </view>
-      <view class='ter_con_info'>
+      <view class='faq_info'>
         <ul>
-          <li>此活动不受理订单修改、订单取消和退款</li>
+          <li>参与活动时须出示打印出的使用凭证，或可出示手机上的电子使用凭证</li>
+          <li>预订时所选择的日期为预计领取的日期，此日期仅作为参考，实际上你可以于2020年3月31日前任意日期领取此周游卡，无须告知客服</li>
+          <li>可从以下任一地点兑换票券</li>
+        </ul>
+        <h4>换票地址：</h4>
+        <ul>
+          <li>繁忙时期为了节省您排队等候的时间，建议选择EDION NAMBA旅游咨询服务中心的东瀛假日（Japan Holiday）服务中心，兑换你的票券</li>
         </ul>
       </view>
     </view>
@@ -145,6 +152,17 @@
         <h4>换票地址：</h4>
         <ul>
           <li>繁忙时期为了节省您排队等候的时间，建议选择EDION NAMBA旅游咨询服务中心的东瀛假日（Japan Holiday）服务中心，兑换你的票券</li>
+        </ul>
+      </view>
+    </view>
+    <view class="back_gd"></view>
+    <view class="normal_style pac_info ter_con">
+      <view>
+        <div id="pac_info_head" class="block_head">退改须知</div>
+      </view>
+      <view class='ter_con_info'>
+        <ul>
+          <li>此活动不受理订单修改、订单取消和退款</li>
         </ul>
       </view>
     </view>
