@@ -244,6 +244,9 @@ li {
     padding-top: 16px;
     background-color: #fff;
 }
+.pac_info_con {
+    margin-top: 20px;
+}
 .block_head {
     padding: 13px 16px 14px 32px;
     background-color: #fff;
@@ -330,6 +333,13 @@ li {
     transform: translate(-50%, -50%)
 }
 
+.book_info {
+    
+}
+.book_des_info {
+    margin-top: 20px;
+    padding-left: 16px;
+}
 .act_info_top {
     margin-top: 6px;
     padding: 8px;
