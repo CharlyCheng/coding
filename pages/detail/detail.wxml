@@ -44,45 +44,31 @@
       <view class="border_bttom">
         <div class="act_icons">
           <div class="flex_vc">
-              <svg class="klk_c_symbol klook-symbol act_icons__icon" aria-hidden="true">
-                  <use xlink:href="#icon-fast"></use>
-              </svg>
+              <div class="bg_image1"></div>
               <p>立即確認並獲得憑證	</p>
           </div>
           <div class="flex_vc">
-              <svg class="klk_c_symbol klook-symbol act_icons__icon" aria-hidden="true">
-                  <use xlink:href="#icon-cancelation_type"></use>
-              </svg>
+              <div class="bg_image2"></div>
               <p>行程前48小時可退改</p>
           </div>
           <div class="flex_vc">
-              <svg class="klk_c_symbol klook-symbol act_icons__icon" aria-hidden="true">
-                  <use xlink:href="#icon-voucher_usage"></use>
-              </svg>
+              <div class="bg_image3"></div>
               <p>可出示手機電子憑證或列印的紙本憑證</p>
           </div>
           <div class="flex_vc">
-              <svg class="klk_c_symbol klook-symbol act_icons__icon" aria-hidden="true">
-                  <use xlink:href="#icon-duration_range"></use>
-              </svg>
+              <div class="bg_image4"></div>
               <p>行程時長：11小時	30分鐘	 - 12小時	50分鐘	</p>
           </div>
           <div class="flex_vc">
-              <svg class="klk_c_symbol klook-symbol act_icons__icon" aria-hidden="true">
-                  <use xlink:href="#icon-language_desc"></use>
-              </svg>
+              <div class="bg_image5"></div>
               <p>英文 / 中文 / 韓語</p>
           </div>
           <div class="flex_vc">
-              <svg class="klk_c_symbol klook-symbol act_icons__icon" aria-hidden="true">
-                  <use xlink:href="#icon-group_type"></use>
-              </svg>
+              <div class="bg_image6"></div>
               <p>湊團導覽</p>
           </div>
           <div class="flex_vc">
-              <svg class="klk_c_symbol klook-symbol act_icons__icon" aria-hidden="true">
-                  <use xlink:href="#icon-transport_type"></use>
-              </svg>
+              <div class="bg_image7"></div>
               <p>自行前往指定地點會合導遊	</p>
           </div>
         </div>
@@ -99,70 +85,24 @@
       </view>
     </view>
     <view class="normal_style pac_info">
-      <div id="pac_info_head" class="block_head">方案選擇</div>
       <view>
+        <div id="pac_info_head" class="block_head">方案選擇</div>
+      </view>
+      <view class='pac_info_top'>
         <div class="pac_info__content">
-          <div class="pac_info__specs">
-            <div class="pac_info_spec__main">
-              <p class="pac_info_spec__name">方案類型</p>
-              <div class="pac_info_spec__attrs">
-                <span class="pac_info_spec__attr">【旺季】水上樂園 |  【淡季】水上樂園  |  韓國汗蒸桑拿 + Luge斜坡滑車  |  韓國汗蒸桑拿 + Luge斜坡滑車 + 綿羊牧場（含纜車）  |  韓國汗蒸桑拿 + Luge斜坡滑車 + 空中鞦韆 + 綿羊牧場（含纜車）  |  【旺季】水上樂園 + 空中鞦韆 + Luge斜坡滑車 + 綿羊牧場 （含纜車）  |  【淡季】水上樂園 + 空中鞦韆 + Luge斜坡滑車 + 綿羊牧場 （含纜車）</span>
-              </div>
-            </div>
+          <div class="pac_info_spec__name">方案類型</div>
+          <div class="pac_info_spec__attrs">
+            <span class="pac_info_spec__attr">日本环球影城1日门票 - 票价A  |  日本环球影城1日门票 - 票价B  |  日本环球影城1日门票 - 票价C</span>
           </div>
         </div>
       </view>
-      <div class="act_schedule">
+      <!-- <div class="act_schedule">
         <div class="act_schedule__main">
           <svg aria-hidden="true" class="klk_c_symbol klook-symbol act_schedule__icon_calendar"><use xlink:href="#icon-calendar"></use></svg> 
           <span class="act_schedule__date">查看可預訂日期</span>
         </div>
         <svg aria-hidden="true" class="klk_c_symbol klook-symbol act_schedule__icon_arrow"><use xlink:href="#icon-arrow-right"></use></svg>
-      </div>
-    </view>
-    <view>
-      <view class="card">
-        活动概览
-      </view>
-      <view class="card">
-        四人包车，专业的司机和导游服务
-      </view>
-      <view class="card">
-        四人包车，专业的司机和导游服务
-      </view>
-    </view>
-    <view>
-      <view class="card">
-        预订须知
-      </view>
-      <view class="card">
-        四人包车，专业的司机和导游服务
-      </view>
-      <view class="card">
-        四人包车，专业的司机和导游服务
-      </view>
-    </view>
-    <view>
-      <view class="card">
-        如何使用
-      </view>
-      <view class="card">
-        四人包车，专业的司机和导游服务
-      </view>
-      <view class="card">
-        四人包车，专业的司机和导游服务
-      </view>
-    </view>
-    <view>
-      <view class="card">
-        退改须知
-      </view>
-      <view class="card">
-        四人包车，专业的司机和导游服务
-      </view>
-      <view class="card">
-        四人包车，专业的司机和导游服务
-      </view>
+      </div> -->
     </view>
   </van-col>
 </van-row>
