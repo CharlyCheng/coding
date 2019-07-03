@@ -35,6 +35,14 @@ Page({
       duration: e.detail.value
     })
   },
+  // 客服点击
+  onClickService() {
+    wx.showToast('点击图标');
+  },
+  
+  onClickButton() {
+    wx.showToast('点击按钮');
+  },
 
   /**
    * 生命周期函数--监听页面加载

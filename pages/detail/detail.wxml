@@ -87,11 +87,11 @@
     <view class="back_gd"></view>
     <view class="normal_style pac_info">
       <view>
-        <div id="pac_info_head" class="block_head">方案選擇</div>
+        <div id="pac_info_head" class="block_head">套餐选项</div>
       </view>
       <view class='pac_info_top'>
         <div class="pac_info__content">
-          <div class="pac_info_spec__name">方案類型</div>
+          <div class="pac_info_spec__name">方案类型</div>
           <div class="pac_info_spec__attrs">
             <span class="pac_info_spec__attr">日本环球影城1日门票 - 票价A  |  日本环球影城1日门票 - 票价B  |  日本环球影城1日门票 - 票价C</span>
           </div>
@@ -109,7 +109,7 @@
     <view class="back_gd"></view>
     <view class="normal_style pac_info">
       <view>
-        <div id="pac_info_head" class="block_head">活动概况</div>
+        <div id="pac_info_head" class="block_head">活动详情</div>
       </view>
       <view class='act_info_top'>
         <Text class="desc_con">
@@ -131,16 +131,54 @@
         </ul>
       </view>
     </view>
-    <view class="normal_style pac_info ter_con">
+    <view class="back_gd"></view>
+    <view class="normal_style pac_info how2use">
       <view>
-        <div id="pac_info_head" class="block_head">退改须知</div>
+        <div id="pac_info_head" class="block_head">如何使用</div>
       </view>
-      <view class='ter_con_info'>
+      <view class='faq_info'>
         <ul>
-          <li>此活动不受理订单修改、订单取消和退款</li>
+          <li>参与活动时须出示打印出的使用凭证，或可出示手机上的电子使用凭证</li>
+          <li>预订时所选择的日期为预计领取的日期，此日期仅作为参考，实际上你可以于2020年3月31日前任意日期领取此周游卡，无须告知客服</li>
+          <li>可从以下任一地点兑换票券</li>
+        </ul>
+        <h4>换票地址：</h4>
+        <ul>
+          <li>繁忙时期为了节省您排队等候的时间，建议选择EDION NAMBA旅游咨询服务中心的东瀛假日（Japan Holiday）服务中心，兑换你的票券</li>
         </ul>
       </view>
     </view>
+    <view class="back_gd"></view>
+    <view class="normal_style pac_info faq">
+      <view>
+        <div id="pac_info_head" class="block_head">常见问题</div>
+      </view>
+      <view class='faq_info'>
+        <ul>
+          <li>活动相关常见问题</li>
+          <li>活动相关常见问题</li>
+        </ul>
+      </view>
+    </view>
+    <!-- 立即预定 -->
+    <!-- <view>
+      <van-goods-action>
+        <van-goods-action-icon
+          icon="chat-o"
+          text="联系客服"
+          bind:click="onClickService"
+        />
+        <van-goods-action-button
+          text="加入购物车"
+          type="warning"
+          bind:click="onClickButton"
+        />
+        <van-goods-action-button
+          text="立即购买"
+          bind:click="onClickButton"
+        />
+      </van-goods-action>
+    </view> -->
   </van-col>
 </van-row>
 

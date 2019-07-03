@@ -29,7 +29,10 @@
   },
   "usingComponents": {
     "van-row": "vant/row/index",
-    "van-col": "vant/col/index"
+    "van-col": "vant/col/index",
+    "van-goods-action": "vant/goods-action/index",
+    "van-goods-action-icon": "vant/goods-action-icon/index",
+    "van-goods-action-button": "vant/goods-action-button/index"
   },
   "sitemapLocation": "sitemap.json"
 }
