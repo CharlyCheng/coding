@@ -100,17 +100,24 @@
     </view>
     <view class="normal_style pac_info">
       <div id="pac_info_head" class="block_head">方案選擇</div>
-      <div class="pac_info__content">
-        <div class="pac_info__specs">
-          
-        </div> 
-        <div class="act_schedule">
-          <div class="act_schedule__main">
-            <svg aria-hidden="true" class="klk_c_symbol klook-symbol act_schedule__icon_calendar"><use xlink:href="#icon-calendar"></use></svg> 
-            <span class="act_schedule__date">查看可預訂日期</span>
+      <view>
+        <div class="pac_info__content">
+          <div class="pac_info__specs">
+            <div class="pac_info_spec__main">
+              <p class="pac_info_spec__name">方案類型</p>
+              <div class="pac_info_spec__attrs">
+                <span class="pac_info_spec__attr">【旺季】水上樂園 |  【淡季】水上樂園  |  韓國汗蒸桑拿 + Luge斜坡滑車  |  韓國汗蒸桑拿 + Luge斜坡滑車 + 綿羊牧場（含纜車）  |  韓國汗蒸桑拿 + Luge斜坡滑車 + 空中鞦韆 + 綿羊牧場（含纜車）  |  【旺季】水上樂園 + 空中鞦韆 + Luge斜坡滑車 + 綿羊牧場 （含纜車）  |  【淡季】水上樂園 + 空中鞦韆 + Luge斜坡滑車 + 綿羊牧場 （含纜車）</span>
+              </div>
+            </div>
           </div>
-          <svg aria-hidden="true" class="klk_c_symbol klook-symbol act_schedule__icon_arrow"><use xlink:href="#icon-arrow-right"></use></svg>
         </div>
+      </view>
+      <div class="act_schedule">
+        <div class="act_schedule__main">
+          <svg aria-hidden="true" class="klk_c_symbol klook-symbol act_schedule__icon_calendar"><use xlink:href="#icon-calendar"></use></svg> 
+          <span class="act_schedule__date">查看可預訂日期</span>
+        </div>
+        <svg aria-hidden="true" class="klk_c_symbol klook-symbol act_schedule__icon_arrow"><use xlink:href="#icon-arrow-right"></use></svg>
       </div>
     </view>
     <view>
