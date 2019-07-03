@@ -17,7 +17,7 @@
     </view>
     <view class='normal_style head_info'>
       <view class="con_head border_bttom">
-        <h1>【夏日限定】維瓦爾第水上樂園 & 斜坡滑車 & 綿羊牧場 & 空中鞦韆一日遊（首爾出發）</h1>
+        <h1>大阪周游券（关西机场 / Namba Edion领取</h1>
         <view class='con_head_des'>
           <h3>游八达岭长城，了解奥林匹克精神</h3>
           <view class="price_box">
@@ -25,7 +25,9 @@
             <span class="price_now">171</span>
             <span class="price_before">177</span>
           </view>
-          <view class='price_guarantee'>BINGO  缤果低价保证 </view>
+          <view class='price_guarantee'>
+            BINGO  缤果低价保证   <span  bindtap="showTip">提示loggogologo</span>
+          </view>
           <view class="price_logo_tip">
             分享logo
           </view>
@@ -198,6 +200,7 @@
       </van-goods-action>
     </view> -->
     <van-toast id="van-toast" />
+    <van-dialog id="van-dialog" />
   </van-col>
 </van-row>
 

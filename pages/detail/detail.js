@@ -1,5 +1,7 @@
 // pages/detail/detail.js
 import Toast from '../../vant/toast/toast';
+import Dialog from '../../vant/dialog/dialog';
+
 
 Page({
 
@@ -41,11 +43,20 @@ Page({
   onClickService() {
     Toast('点击图标');
   },
-  
+  // 提示消息
+  showTip() {
+    Dialog.alert({
+      title: 'BINGO缤果低价保证',
+      message: '若您发现当地运营商提供更低的价格，我们承诺将补偿给你双倍价格'
+    }).then(() => {
+      // on close
+    });
+  },
+  // 立即预订点击
   onClickButton() {
     Toast('点击按钮');
   },
-
+  //获取详情页面数据
   /**
    * 生命周期函数--监听页面加载
    */
