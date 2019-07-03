@@ -28,9 +28,9 @@
           <view class='price_guarantee'>
             BINGO  缤果低价保证   <span  bindtap="showTip">提示tip</span>
           </view>
-          <view class="price_logo_tip">
+          <!-- <view class="price_logo_tip">
             分享logo
-          </view>
+          </view> -->
         </view>
       </view>
       <view class="keynote border_bttom">
@@ -78,10 +78,14 @@
       <view class="high_light_content border_bttom">
         <div class="high_light mark_down">
           <ul>
-            <li>一日暢玩韓國人氣設施，炎炎夏日在亞洲第二的水上樂園盡情享受各種水上設施</li>
-            <li>冬季滑雪道在夏季搖身一變，成了刺激趣味的Luge斜坡滑道</li>
-            <li>綿羊牧場體驗餵食小羊，樂趣互動五星好評</li>
-            <li>乘坐空中鞦韆，俯瞰腳下旖旎景色，感受微風吹拂的愜意</li>
+              <li>大阪周游卡一日券/二日券，让你免费进入HEP FIVE摩天轮、梅田蓝天大厦空中庭园展望台、大阪天守阁、通天阁等热门景点</li>
+              <li>大阪市内巴士和地铁，期间内无限乘坐，一日券还可以搭乘部分私铁，轻松东奔西跑又不伤荷包</li>
+              <li>出示大阪周游卡，便可轻松免费进入超过35个免费景点，无需排队换票</li>
+              <li>内附的TOKU优惠券，即可享有25个景点的入场优惠，以及众多餐厅和店铺的专属折扣</li>
+              <li>还有<a href="https://www.klook.com/zh-CN/activity/16209-universal-studios-japan-amazing-pass-combo-osaka/">日本环球影城一日票 & 大阪周游卡</a>组合套餐</li>
+              <li>如有其他地区领取的需求，可参考<a href="https://www.klook.com/zh-CN/activity/7402-amazing-pass-osaka/">大阪周游券（香港/台湾/大阪领取）</a>
+              </li>
+              <li>热门车站附近更有众多<a href="https://www.klook.com/zh-CN/promo/osaka-gourmet-cuisine">精选餐厅</a>等你探索！</li>
           </ul>
         </div>
       </view>
