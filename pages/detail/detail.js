@@ -1,4 +1,6 @@
 // pages/detail/detail.js
+import Toast from '../../vant/toast/toast';
+
 Page({
 
   /**
@@ -37,11 +39,11 @@ Page({
   },
   // 客服点击
   onClickService() {
-    wx.showToast('点击图标');
+    Toast('点击图标');
   },
   
   onClickButton() {
-    wx.showToast('点击按钮');
+    Toast('点击按钮');
   },
 
   /**

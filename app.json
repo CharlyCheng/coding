@@ -32,7 +32,8 @@
     "van-col": "vant/col/index",
     "van-goods-action": "vant/goods-action/index",
     "van-goods-action-icon": "vant/goods-action-icon/index",
-    "van-goods-action-button": "vant/goods-action-button/index"
+    "van-goods-action-button": "vant/goods-action-button/index",
+    "van-toast": "vant/toast/index"
   },
   "sitemapLocation": "sitemap.json"
 }
