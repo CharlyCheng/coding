@@ -45,15 +45,15 @@
         <div class="act_icons">
           <div class="flex_vc">
               <div class="bg_image1"></div>
-              <p>立即確認並獲得憑證	</p>
+              <p>立刻确认并获得凭证</p>
           </div>
           <div class="flex_vc">
               <div class="bg_image2"></div>
-              <p>行程前48小時可退改</p>
+              <p>随时退、有条件退、不支持退款</p>
           </div>
           <div class="flex_vc">
               <div class="bg_image3"></div>
-              <p>可出示手機電子憑證或列印的紙本憑證</p>
+              <p>可出示手机电子凭证或打印凭证、必须提前兑换实体票券</p>
           </div>
           <div class="flex_vc">
               <div class="bg_image4"></div>
@@ -104,6 +104,41 @@
           <span class="act_schedule__date">查看可預訂日期</span>
         </div>
         <div class="act_icon_right"></div>
+      </view>
+    </view>
+    <view class="back_gd"></view>
+    <view class="normal_style pac_info">
+      <view>
+        <div id="pac_info_head" class="block_head">活动概况</div>
+      </view>
+      <view class='act_info_top'>
+        <Text class="desc_con">
+          作为和东京迪士尼公园齐名的游乐园，去大阪旅游更不能错过！ ！日本环球影城，一日券门票让您畅游尽情享受酷炫魔法的哈利波特禁忌之旅，体验2018年刚开幕的小小兵乐园，让你近距离接触小小兵一起游玩，搭乘世界最大360度的云霄飞车飞天翼龙。当然少不了水上乐施包含有热带雨林丛生的侏㑩纪公园探险、跟着船长一起去猎杀大白鲨，，作为动漫大国的日本，本土的动漫大赏更是少不了Cool Japan动漫系列。惊奇好玩的游乐设施更是让小朋友惊喜连连，多项游乐设施等你来挑战。购买大阪环球影城门票，一日券让您畅游尽情享受
+        </Text>
+        <view class="desc_img">
+          <image class="desc_image" src="https://res.klook.com/images/fl_lossy.progressive,q_65/c_fill,w_1295,h_720,f_auto/w_80,x_15,y_15,g_south_west,l_klook_water/activities/efrleravwhb5gj5og1xz/日本环球影城™1日电子门票.jpg" />
+          <Text class="img_desc">日本环球影城®，2017年全新开幕小小兵乐园</Text>
+        </view>
+      </view>
+    </view>
+    <view class="normal_style pac_info ter_con">
+      <view>
+        <div id="pac_info_head" class="block_head">退改须知</div>
+      </view>
+      <view class='ter_con_info'>
+        <ul>
+          <li>此活动不受理订单修改、订单取消和退款</li>
+        </ul>
+      </view>
+    </view>
+    <view class="normal_style pac_info ter_con">
+      <view>
+        <div id="pac_info_head" class="block_head">退改须知</div>
+      </view>
+      <view class='ter_con_info'>
+        <ul>
+          <li>此活动不受理订单修改、订单取消和退款</li>
+        </ul>
       </view>
     </view>
   </van-col>

@@ -18,7 +18,7 @@
     background-color: rgba(0,0,0,0.12);
 }
 .swiper_content {
-    height: 320px;
+    height: 250px;
 }
 .swiper_image {
     display: block;
@@ -255,6 +255,17 @@ li {
 .pac_info_top {
     margin-top: 22px;
     padding: 16px;
+    position: relative;
+}
+.pac_info_right {
+    width: 24px;
+    height: 24px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' id='icon-arrow-right' fill='rgba(0,0,0,0.54)' viewBox='0 0 16 16' width='100%25' height='100%25'%3E%3Cpath fill-rule='evenodd' d='M9.293 8L5.646 4.354a.5.5 0 0 1 .708-.708l4 4a.498.498 0 0 1 0 .708l-4 4a.5.5 0 1 1-.708-.708L9.293 8z'%3E%3C/path%3E%3C/svg%3E");
+    background-size: cover;
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translate(-50%, -50%)
 }
 .pac_info_spec__name {
     line-height: 19px;
@@ -278,10 +289,12 @@ li {
     color: rgba(0,0,0,0.54);
 }
 .act_schedule {
-    padding: 16px;
+    height: 48px;
+    padding: 0 16px;
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    position: relative;
 }
 .schedule_image{
     width: 24px;
@@ -300,4 +313,45 @@ li {
     height: 24px;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' id='icon-arrow-right' fill='rgba(0,0,0,0.54)' viewBox='0 0 16 16' width='100%25' height='100%25'%3E%3Cpath fill-rule='evenodd' d='M9.293 8L5.646 4.354a.5.5 0 0 1 .708-.708l4 4a.498.498 0 0 1 0 .708l-4 4a.5.5 0 1 1-.708-.708L9.293 8z'%3E%3C/path%3E%3C/svg%3E");
     background-size: cover;
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translate(-50%, -50%)
+}
+
+.act_info_top {
+    margin-top: 6px;
+    padding: 8px;
+    position: relative;
+}
+.desc_con {
+    line-height: 21px;
+    font-size: 14px;
+}
+.desc_img {
+    width: 343px;
+    margin-top: 16px;
+}
+.desc_image {
+    width: 343px;
+    height: 190px;
+}
+.img_desc{
+    padding: 8px 0 0;
+    font-size: 14px;
+    line-height: 21px;
+    color: rgba(0,0,0,0.54);
+}
+
+.ter_con{
+    margin-top: 8px;
+    padding-top: 16px;
+    background-color: #fff;
+}
+.ter_con_info {
+    font-size: 14px;
+    line-height: 21px;
+    padding-left: 56px;
+    color: #333;
+    margin-top: 20px;
 }
