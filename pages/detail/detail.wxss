@@ -1,9 +1,63 @@
 /* pages/detail/detail.wxss */
-.card {
+.normal_style {
     width:100%;
     height:auto;
     background:#ffffff;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+.swiper_content {
+    height: 320px;
+}
+.swiper_image {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.head_info {
+    padding: 0 16px;
+    background-color: white;
+}
+.con_head{
+    padding: 24px 0 16px;
+    min-height: 105px;
+}
+.con_head h1 {
+    font-size: 24px;
+    line-height: 29px;
+    font-weight: bold;
+}
+.con_head h3{
+    font-size: 14px;
+    line-height: 16px;
+    color: rgba(0,0,0,0.54);
+}
+.price_box {
+    display: flex;
+    position: relative;
+    margin-top: 16px
+}
+.price_box .currency {
+    font-size: 24px;
+    line-height: 29px;
+    color: #ff5722;
+    font-weight: bold;
+    margin-right: 5px;  
+}
+.price_box .price_now{
+    font-size: 24px;
+    line-height: 29px;
+    color: #ff5722;
+    font-weight: bold;
+    margin-right: 5px;
+}
+.price_box .price_before{
+    margin-bottom: 3px;
+    font-size: 14px;
+    line-height: 16px;
+    text-decoration: line-through;
+    color: rgba(0,0,0,0.38);
+    -ms-flex-item-align: end;
+    align-self: flex-end;
 }
