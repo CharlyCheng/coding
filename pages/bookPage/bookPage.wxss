@@ -1,0 +1,11 @@
+/* pages/bookPage/bookPage.wxss */
+
+.book_page_date {
+  height: 40px;
+}
+.book_page_date .data_des {
+  font-size: 14px;
+}
+.book_page_date .act_icon_right {
+
+}

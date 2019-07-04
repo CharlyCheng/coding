@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/bookPage/bookPage",
     "pages/detail/detail",
     "pages/my/my",
     "pages/index/index",
@@ -20,10 +21,6 @@
       {
         "pagePath": "pages/my/my",
         "text": "我的"
-      },
-      {
-        "pagePath": "pages/detail/detail",
-        "text": "商品详情"
       }
     ]
   },

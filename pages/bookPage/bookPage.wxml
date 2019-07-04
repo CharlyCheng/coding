@@ -1,0 +1,25 @@
+<!--pages/bookPage/bookPage.wxml-->
+<van-row>
+  <van-col span="24">
+    <view class="book_page_date">
+      <text class="data_des">2019年6月23日</text>
+      <div class="act_icon_right"></div>
+    </view>
+    <view class="book_page_date">
+      <text class="data_des">2019年6月23日</text>
+      <div class="act_icon_right"></div>
+    </view>
+    <view class="book_page_date">
+      <text class="data_des">2019年6月23日</text>
+      <div class="act_icon_right"></div>
+    </view>
+    <view class="book_page_date">
+      <text class="data_des">2019年6月23日</text>
+      <div class="act_icon_right"></div>
+    </view>
+    <view class="book_page_date">
+      <text class="data_des">2019年6月23日</text>
+      <div class="act_icon_right"></div>
+    </view>
+  </van-col>
+</van-row>
