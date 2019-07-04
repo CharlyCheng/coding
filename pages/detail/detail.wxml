@@ -78,14 +78,7 @@
       <view class="high_light_content border_bttom">
         <div class="high_light mark_down">
           <ul>
-              <li>大阪周游卡一日券/二日券，让你免费进入HEP FIVE摩天轮、梅田蓝天大厦空中庭园展望台、大阪天守阁、通天阁等热门景点</li>
-              <li>大阪市内巴士和地铁，期间内无限乘坐，一日券还可以搭乘部分私铁，轻松东奔西跑又不伤荷包</li>
-              <li>出示大阪周游卡，便可轻松免费进入超过35个免费景点，无需排队换票</li>
-              <li>内附的TOKU优惠券，即可享有25个景点的入场优惠，以及众多餐厅和店铺的专属折扣</li>
-              <li>还有<a href="https://www.klook.com/zh-CN/activity/16209-universal-studios-japan-amazing-pass-combo-osaka/">日本环球影城一日票 & 大阪周游卡</a>组合套餐</li>
-              <li>如有其他地区领取的需求，可参考<a href="https://www.klook.com/zh-CN/activity/7402-amazing-pass-osaka/">大阪周游券（香港/台湾/大阪领取）</a>
-              </li>
-              <li>热门车站附近更有众多<a href="https://www.klook.com/zh-CN/promo/osaka-gourmet-cuisine">精选餐厅</a>等你探索！</li>
+              <li wx:for="{{highLightList}}" wx:key="{{index}}">{{item.name}}</li>
           </ul>
         </div>
       </view>
@@ -95,14 +88,14 @@
       <view>
         <div id="pac_info_head" class="block_head">套餐选项</div>
       </view>
-      <view class="pac_info_con">
+      <view class="pac_info_con" wx:for="{{pacInfoList}}" wx:key="{{index}}">
         <view>
-          <text>普通门票 + 全岛接送</text>
-          <text>可定明日</text>
+          <view><text class="pac_name">{{item.name}}</text></view>
+          <view><text class="pac_date">{{item.date}}</text></view>
         </view>
         <view>
-          <div><span>￥250元</span>>起</div>
-          <button bindtap="onClickButton">预订</button>
+          <div><span class="pac_price">￥{{item.price}}元</span>起</div>
+          <button class="pac_book" bindtap="onClickButton">预订</button>
         </view>
       </view>
       <!-- <view class='pac_info_top'>

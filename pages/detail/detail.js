@@ -17,7 +17,41 @@ Page({
     indicatorDots: true,
     autoplay: false,
     interval: 5000,
-    duration: 1000
+    duration: 1000,
+    pacInfoList: [
+      {
+        'name': '普通门票 + 全岛接送',
+        'date': '可定明日',
+        'price': '250',
+      },
+      {
+        'name': '普通门票 + 全岛接送',
+        'date': '可定明日',
+        'price': '250',
+      },
+      {
+        'name': '普通门票 + 全岛接送',
+        'date': '可定明日',
+        'price': '250',
+      }
+    ],
+    highLightList: [
+      {
+        'name': '大阪周游卡一日券/二日券，让你免费进入HEP FIVE摩天轮、梅田蓝天大厦空中庭园展望台、大阪天守阁、通天阁等热门景点',
+      },
+      {
+        'name': '大阪周游卡一日券/二日券，让你免费进入HEP FIVE摩天轮、梅田蓝天大厦空中庭园展望台、大阪天守阁、通天阁等热门景点',
+      },
+      {
+        'name': '大阪周游卡一日券/二日券，让你免费进入HEP FIVE摩天轮、梅田蓝天大厦空中庭园展望台、大阪天守阁、通天阁等热门景点',
+      },
+      {
+        'name': '大阪周游卡一日券/二日券，让你免费进入HEP FIVE摩天轮、梅田蓝天大厦空中庭园展望台、大阪天守阁、通天阁等热门景点',
+      },
+      {
+        'name': '大阪周游卡一日券/二日券，让你免费进入HEP FIVE摩天轮、梅田蓝天大厦空中庭园展望台、大阪天守阁、通天阁等热门景点',
+      },
+    ]
   },
   changeIndicatorDots: function(e) {
     this.setData({
