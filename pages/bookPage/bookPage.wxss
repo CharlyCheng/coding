@@ -43,9 +43,9 @@
 }
 .book_combo_chose {
   background: #fff;
-  color: #E45123;
-  /* border: 1px solid #E45123; */
-  box-shadow: 1px 1px 1px #E45123;
+  color: DeepPink;
+  border: 1px solid DeepPink;
+  /* box-shadow: 1px 1px 1px #E45123; */
 }
 .book_page_session {
   display: flex;
@@ -66,8 +66,7 @@
 }
 .session_btn_chose {
   color: #E45123;
-  /* border: 1px solid #E45123; */
-  box-shadow: 1px 1px 1px #E45123;
+  border: 1px solid #E45123!important;
 }
 
 .book_page_count {
