@@ -22,13 +22,31 @@
         </view>
       </view>
       <view class="bg_btom"></view>
+      <view class="book_title">数量</view>
       <view class="book_page_count">
-        <text class="data_des">2019年6月23日</text>
-        <div class="act_icon_right"></div>
+        <view class="book_count" wx:for="{{countList}}" wx:key="{{index}}">
+          <view class="count_left">
+            <text class="count_des">{{item.name}}</text>
+            <view><text class="count_money">￥{{item.price}}</text></view>
+          </view>
+          <view class="stepper">
+            <text class="step_num">{{item.stepperNum}}</text>
+            <text class="{{item.stepperNum == 0 ? 'normal_minus normal_minus_opacity':'normal_minus'}}" data-minusindex="{{index}}" bindtap="bindMinus">-</text>
+            <text class="normal_plus" data-plusindex="{{index}}" bindtap="bindPlus">+</text>
+            <!-- <input type="number" bindchange="bindManual" value="{{num}}" /> -->
+          </view>
+        </view>
       </view>
-      <view class="book_page_date">
-        <text class="data_des">2019年6月23日</text>
-        <div class="act_icon_right"></div>
+      <view class="bg_btom"></view>
+      <view class="book_page_rule">
+        <text>立即确认并获得凭证</text>
+        <text>活动开始24小孩前可退改</text>
+      </view>
+      <view class="book_total_money">
+        <text>￥{{totalMoney}}</text>
+      </view>
+      <view class="book_next_btn">
+        <button bindtap="bookNextPay">下一步</button>
       </view>
     </view>
   </van-col>

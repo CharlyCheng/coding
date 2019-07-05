@@ -37,8 +37,21 @@ Page({
         'price': '250',
       }
     ],
+    countList: [
+      {
+        'name': '成人',
+        'price': 50,
+        'stepperNum': 0
+      },
+      {
+        'name': '儿童',
+        'price': 20,
+        'stepperNum': 0
+      }
+    ],
     isChooseIndex: 0,
-    isSeesionIndex: 0
+    isSeesionIndex: 0,
+    totalMoney: 0
   },
   // 选择套餐
   chooseCombo(event) {
@@ -59,6 +72,50 @@ Page({
     this.setData({
       isSeesionIndex: newIndex || 0
     })
+  },
+  // 减少数量
+  bindMinus(event) {
+    const newIndex = event.target.dataset.minusindex
+    const countList = this.data.countList
+    const oldStepperNum = countList[newIndex].stepperNum
+    let totalMoney = this.data.totalMoney
+    if (oldStepperNum  < 1) {
+      return;
+    }
+    const stepperNum =  oldStepperNum - 1
+    countList[newIndex].stepperNum = stepperNum
+    countList.map( (item,index) => {
+      if (index == newIndex) {
+        totalMoney = totalMoney - item.price
+      }
+    })
+    this.setData({
+      countList: countList,
+      totalMoney: totalMoney
+    })
+  },
+  // 增加数量
+  bindPlus(event) {
+    const newIndex = event.target.dataset.plusindex
+    const countList = this.data.countList
+    const oldStepperNum = countList[newIndex].stepperNum
+    const stepperNum = oldStepperNum + 1
+    let totalMoney = this.data.totalMoney
+    countList[newIndex].stepperNum = stepperNum
+    countList.map( (item,index) => {
+      if (index == newIndex) {
+        totalMoney +=  item.price
+        return;
+      }
+    })
+    this.setData({
+      countList: countList,
+      totalMoney: totalMoney
+    })
+  },
+  // 下一步去支付
+  bookNextPay() {
+
   },
   /**
    * 生命周期函数--监听页面加载
