@@ -3,15 +3,15 @@
   <van-col span="24">
     <view class="book_page_content">
       <view class="book_title">选择日期</view>
-      <view class="book_page_date">
+      <view class="book_page_date" bindtap="openSelectDate">
         <text class="data_des">{{selectDateTimer}}</text>
         <div class="act_icon_right"></div>
       </view>
       <view class="bg_btom"></view>
       <view class="book_title">套餐类型</view>
       <view class="book_page_combo">
-        <view class="{{isChooseIndex == index ? 'book_combo_item book_combo_chose': 'book_combo_item'}}" wx:for="{{comboList}}" wx:key="{{index}}">
-          <text data-comboindex="{{index}}" bindtap="chooseCombo">{{item.name}}</text>
+        <view class="{{isChooseIndex == index ? 'book_combo_item book_combo_chose': 'book_combo_item'}}" wx:for="{{comboList}}" wx:key="{{index}}" data-comboindex="{{index}}" bindtap="chooseCombo">
+          <text class="combo_des">{{item.name}}</text>
         </view>
       </view>
       <view class="bg_btom"></view>
@@ -48,10 +48,22 @@
       <view class="book_next_btn">
         <button bindtap="bookNextPay">下一步</button>
       </view>
-      <calendar
-        calendarConfig="{{calendarConfig}}"
-        bind:afterTapDay="afterTapDay"
-      ></calendar>
+      <van-popup
+        custom-class="book_popup_content"
+        show="{{isShowDate}}"
+        position="bottom"
+        overlay="{{true}}"
+      > 
+        <van-icon class="popup_close" name="cross" bindtap="closeSelectDate" />
+        <view class="book_pop_des">
+          <text class="date_des">选择日期</text>
+          <view><text>请选择预订航班的抵达日期</text></view>
+        </view>
+        <calendar
+          calendarConfig="{{calendarConfig}}"
+          bind:afterTapDay="afterTapDay"
+        ></calendar>
+      </van-popup>
     </view>
   </van-col>
 </van-row>

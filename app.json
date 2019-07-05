@@ -34,6 +34,7 @@
     "van-dialog": "vant/dialog/index",
     "van-button": "vant/button/index",
     "van-icon": "vant/icon/index",
+    "van-popup": "vant/popup/index",
     "calendar": "component/calendar/index"
   },
   "sitemapLocation": "sitemap.json"

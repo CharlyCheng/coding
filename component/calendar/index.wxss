@@ -39,7 +39,8 @@
 }
 
 .pink-color {
-  color: #ff629a;
+  color: #333;
+  /* color: #ff629a; */
 }
 
 .white-color {
@@ -98,16 +99,20 @@
 .day {
   width: 60rpx;
   height: 60rpx;
-  font-size: 26rpx;
-  font-weight: 200;
+  /* font-size: 26rpx;
+  font-weight: 200; */
+  font-size: 32rpx;
+  font-weight: 400;
 }
 
 .normal-day-color {
-  color: #88d2ac;
+  color: #333;
+  /* color: #88d2ac; */
 }
 
 .day-choosed-color {
-  color: #fff;
+  color: #333;
+  /* color: #fff; */
 }
 
 /* todo相关样式 */
@@ -154,7 +159,7 @@
 }
 
 .disable-day-bg {
-  background-color: #f6f6f7;
+  /* background-color: #f6f6f7; */
 }
 
 /* 日期圆圈标记 */

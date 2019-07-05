@@ -51,12 +51,15 @@ Page({
     ],
     isChooseIndex: 0,
     isSeesionIndex: 0,
+    isShowDate: true,
     totalMoney: 0,
     calendarConfig: {
       multi: false,
       disablePastDay: true,
+      onlyShowCurrentMonth: true,
+      noDefault: true
     },
-    selectDateTimer: ''
+    selectDateTimer: '请选择日期'
   },
   // 选择套餐
   chooseCombo(event) {
@@ -122,11 +125,28 @@ Page({
   bookNextPay() {
 
   },
+  // 打开日期选择
+  openSelectDate() {
+    this.setData({
+      isShowDate: true
+    })
+  },
+  // 关掉日期选择
+  closeSelectDate() {
+    this.setData({
+      isShowDate: false
+    })
+  },
   // 日期选择
   afterTapDay(val) {
-    console.log('====================================');
-    console.log('val',val);
-    console.log('====================================');
+    const year = val.detail.year
+    const month = val.detail.month
+    const day = val.detail.day
+    const selectDate = `${year}-${month}-${day}`
+    this.setData({
+      isShowDate: false,
+      selectDateTimer: selectDate 
+    })
   },
   /**
    * 生命周期函数--监听页面加载

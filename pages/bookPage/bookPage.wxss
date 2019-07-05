@@ -32,6 +32,9 @@
   min-height: 120px;
   padding: 8px 16px;
 }
+.combo_des {
+  width: 100%;
+}
 .book_combo_item {
   height: 30px;
   background: #eee;
@@ -129,4 +132,25 @@
 .book_next_btn button {
   color: #fff;
   background: #E45123;
+}
+
+.book_popup_content {
+  
+}
+.book_pop_des {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items:center;
+  margin-bottom: 18px;
+}
+.book_pop_des .date_des {
+  margin-bottom: 12px;
+}
+.popup_close {
+  margin-left: 8px;
+  margin-bottom: 18px;
+}
+.van-popup--bottom {
+  height: 100%!important;
 }
