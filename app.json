@@ -33,7 +33,8 @@
     "van-toast": "vant/toast/index",
     "van-dialog": "vant/dialog/index",
     "van-button": "vant/button/index",
-    "van-icon": "vant/icon/index"
+    "van-icon": "vant/icon/index",
+    "calendar": "component/calendar/index"
   },
   "sitemapLocation": "sitemap.json"
 }

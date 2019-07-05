@@ -1,6 +1,6 @@
 // pages/bookPage/bookPage.js
-Page({
 
+Page({
   /**
    * 页面的初始数据
    */
@@ -51,7 +51,12 @@ Page({
     ],
     isChooseIndex: 0,
     isSeesionIndex: 0,
-    totalMoney: 0
+    totalMoney: 0,
+    calendarConfig: {
+      multi: false,
+      disablePastDay: true,
+    },
+    selectDateTimer: ''
   },
   // 选择套餐
   chooseCombo(event) {
@@ -116,6 +121,12 @@ Page({
   // 下一步去支付
   bookNextPay() {
 
+  },
+  // 日期选择
+  afterTapDay(val) {
+    console.log('====================================');
+    console.log('val',val);
+    console.log('====================================');
   },
   /**
    * 生命周期函数--监听页面加载

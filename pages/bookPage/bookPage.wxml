@@ -4,7 +4,7 @@
     <view class="book_page_content">
       <view class="book_title">选择日期</view>
       <view class="book_page_date">
-        <text class="data_des">2019年6月23日</text>
+        <text class="data_des">{{selectDateTimer}}</text>
         <div class="act_icon_right"></div>
       </view>
       <view class="bg_btom"></view>
@@ -48,6 +48,10 @@
       <view class="book_next_btn">
         <button bindtap="bookNextPay">下一步</button>
       </view>
+      <calendar
+        calendarConfig="{{calendarConfig}}"
+        bind:afterTapDay="afterTapDay"
+      ></calendar>
     </view>
   </van-col>
 </van-row>
