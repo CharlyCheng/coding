@@ -1,25 +1,35 @@
 <!--pages/bookPage/bookPage.wxml-->
 <van-row>
   <van-col span="24">
-    <view class="book_page_date">
-      <text class="data_des">2019年6月23日</text>
-      <div class="act_icon_right"></div>
-    </view>
-    <view class="book_page_date">
-      <text class="data_des">2019年6月23日</text>
-      <div class="act_icon_right"></div>
-    </view>
-    <view class="book_page_date">
-      <text class="data_des">2019年6月23日</text>
-      <div class="act_icon_right"></div>
-    </view>
-    <view class="book_page_date">
-      <text class="data_des">2019年6月23日</text>
-      <div class="act_icon_right"></div>
-    </view>
-    <view class="book_page_date">
-      <text class="data_des">2019年6月23日</text>
-      <div class="act_icon_right"></div>
+    <view class="book_page_content">
+      <view class="book_title">选择日期</view>
+      <view class="book_page_date">
+        <text class="data_des">2019年6月23日</text>
+        <div class="act_icon_right"></div>
+      </view>
+      <view class="bg_btom"></view>
+      <view class="book_title">套餐类型</view>
+      <view class="book_page_combo">
+        <view class="{{isChooseIndex == index ? 'book_combo_item book_combo_chose': 'book_combo_item'}}" wx:for="{{comboList}}" wx:key="{{index}}">
+          <text data-comboindex="{{index}}" bindtap="chooseCombo">{{item.name}}</text>
+        </view>
+      </view>
+      <view class="bg_btom"></view>
+      <view class="book_title">场次</view>
+      <view class="book_page_session">
+        <view wx:for="{{comboList}}" wx:key="{{index}}">
+          <text data-seesionindex="{{index}}" bindtap="chooseSession" class="{{isSeesionIndex == index ? 'session_btn session_btn_chose': 'session_btn'}}">{{item.date}}</text>
+        </view>
+      </view>
+      <view class="bg_btom"></view>
+      <view class="book_page_count">
+        <text class="data_des">2019年6月23日</text>
+        <div class="act_icon_right"></div>
+      </view>
+      <view class="book_page_date">
+        <text class="data_des">2019年6月23日</text>
+        <div class="act_icon_right"></div>
+      </view>
     </view>
   </van-col>
 </van-row>

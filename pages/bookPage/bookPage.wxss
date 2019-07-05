@@ -1,11 +1,71 @@
 /* pages/bookPage/bookPage.wxss */
 
+.book_page_content {
+  
+}
+.bg_btom {
+  height: 4px;
+  background: #eee;
+}
+.book_title {
+  padding: 8px 16px;
+}
 .book_page_date {
   height: 40px;
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 16px;
+}
+.book_page_date .act_icon_right{
+  width: 24px;
+  height: 24px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' id='icon-arrow-right' fill='rgba(0,0,0,0.54)' viewBox='0 0 16 16' width='100%25' height='100%25'%3E%3Cpath fill-rule='evenodd' d='M9.293 8L5.646 4.354a.5.5 0 0 1 .708-.708l4 4a.498.498 0 0 1 0 .708l-4 4a.5.5 0 1 1-.708-.708L9.293 8z'%3E%3C/path%3E%3C/svg%3E");
+  background-size: cover;
 }
 .book_page_date .data_des {
   font-size: 14px;
 }
-.book_page_date .act_icon_right {
 
+.book_page_combo {
+  min-height: 120px;
+  padding: 8px 16px;
+}
+.book_combo_item {
+  height: 30px;
+  background: #eee;
+  margin-bottom: 14px;
+  font-size: 14px;
+  line-height: 30px;
+  padding-left: 12px;
+  border-radius: 4px;
+}
+.book_combo_chose {
+  background: #fff;
+  color: #E45123;
+  /* border: 1px solid #E45123; */
+  box-shadow: 1px 1px 1px #E45123;
+}
+.book_page_session {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px 20px;
+}
+.book_page_session .session_btn {
+  padding: 0 14px;
+  height: 26px;
+  border: 1px solid #eee;
+  border-radius: 16px;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 8px;
+  margin-bottom: 8px;
+}
+.session_btn_chose {
+  color: #E45123;
+  /* border: 1px solid #E45123; */
+  box-shadow: 1px 1px 1px #E45123;
 }

@@ -26,7 +26,7 @@
             <span class="price_before">177</span>
           </view>
           <view class='price_guarantee'>
-            BINGO  缤果低价保证   <span  bindtap="showTip">提示tip</span>
+            BINGO  缤果低价保证   <span  bindtap="showTip"><van-icon name="info-o"></van-icon></span>
           </view>
           <!-- <view class="price_logo_tip">
             分享logo
@@ -35,7 +35,7 @@
       </view>
       <view class="keynote border_bttom">
         <view class="note_des">
-          <span class="klook-icon-people"></span>
+          <van-icon name="friends-o"></van-icon>
           <p>166 人參加过</p>
         </view>
         <view class="note_des">
