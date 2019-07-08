@@ -51,37 +51,40 @@ Page({
   },
   // 立即预订点击
   onClickButton() {
-    Toast('点击按钮');
+    wx.navigateTo({
+      url: `/pages/bookPage/bookPage`
+    })
   },
   //获取详情页面数据
-  getGoodDetail() {
+  getGoodDetail(options) {
     const url = "http://123.56.123.203:8010/trip-web/v1/product/productDesc";
+    const { product_id = '' } = options
     const data = {
-      "product_id": "p105d0c6-76d3-4838-a83f-299835d60b4f",
+      "product_id": product_id,
       "uuid": "111111"
     }
     this.setData({
       tradeDetail: tradeDetail
     })
-    // wx.request({
-    //   url: url, 
-    //   data: data,
-    //   header: {
-    //     'content-type': 'application/json'
-    //   },
-    //   success (res) {
-    //     const data = res.data
-    //     this.setData({
-    //       tradeDetail: data
-    //     })
-    //   }
-    // })
+    wx.request({
+      url: url, 
+      data: data,
+      header: {
+        'content-type': 'application/json'
+      },
+      success (res) {
+        const data = res.data
+        this.setData({
+          tradeDetail: data
+        })
+      }
+    })
   },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.getGoodDetail()
+    this.getGoodDetail(options)
   },
 
   /**
