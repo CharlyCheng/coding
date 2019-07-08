@@ -57,7 +57,7 @@
         <van-icon class="popup_close" name="cross" bindtap="closeSelectDate" />
         <view class="book_pop_des">
           <text class="date_des">选择日期</text>
-          <view><text>请选择预订航班的抵达日期</text></view>
+          <view class="date_rule"><text class="date_text">请选择预订航班的抵达日期</text></view>
         </view>
         <calendar
           calendarConfig="{{calendarConfig}}"

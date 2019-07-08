@@ -1,8 +1,5 @@
 /* pages/bookPage/bookPage.wxss */
 
-.book_page_content {
-  
-}
 .bg_btom {
   height: 4px;
   background: #eee;
@@ -134,9 +131,6 @@
   background: #E45123;
 }
 
-.book_popup_content {
-  
-}
 .book_pop_des {
   display: flex;
   flex-direction: column;
@@ -146,6 +140,22 @@
 }
 .book_pop_des .date_des {
   margin-bottom: 12px;
+  line-height: 24px;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  color: #ff5722;
+}
+.book_pop_des .date_rule {
+  margin-top: 10px;
+  background-color: rgba(245, 166, 35, 0.12);
+  padding: 12px 16px;
+}
+.book_pop_des .date_text {
+  margin-left: 8px;
+  font-size: 14px;
+  line-height: 16px;
+  color: rgba(0, 0, 0, 0.54);
 }
 .popup_close {
   margin-left: 8px;
