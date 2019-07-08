@@ -148,6 +148,24 @@ Page({
       selectDateTimer: selectDate 
     })
   },
+  // 请求详情页数据
+  getTradeDetail() {
+    const url = "http://123.56.123.203:8010/trip-web/v1/product/productDesc";
+    const data = {
+      "product_id": "p105d0c6-76d3-4838-a83f-299835d60b4f",
+      "uuid": "111111"
+    }
+    wx.request({
+      url: url, 
+      data: data,
+      header: {
+        'content-type': 'application/json'
+      },
+      success (res) {
+        const data = res.data
+      }
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */

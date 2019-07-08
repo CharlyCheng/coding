@@ -111,7 +111,9 @@
     line-height: 16px;
     color: rgba(0,0,0,0.54);
 }
-
+.keynote .friends_color {
+    color: #d1d1d1;
+}
 .act_icons {
     padding: 16px 0;
 }
@@ -273,7 +275,7 @@ li {
     color: #fff;
 }
 .block_head {
-    padding: 10px 16px 14px 32px;
+    padding: 13px 16px 14px 32px;
     background-color: #fff;
     font-size: 24px;
     line-height: 29px;
@@ -362,8 +364,8 @@ li {
     
 }
 .book_des_info {
-    margin-top: 20px;
-    padding-left: 16px;
+    margin-top:20px;
+    padding: 10px 16px;
 }
 .act_info_top {
     margin-top: 6px;
@@ -397,24 +399,33 @@ li {
 .ter_con_info {
     font-size: 14px;
     line-height: 21px;
-    padding-left: 56px;
     color: #333;
-    margin-top: 20px;
-    padding: 16px 16px 32px;
+    padding: 8px 16px 32px;
     padding-left: 46px;
+    margin-top: 10px;
 }
 
 .faq {
     height: 44px;
     font-size: 16px;
     line-height: 44px;
-    padding: 0 0 0 .42667rem;
     position: relative;
 }
 .faq_info {
-    padding: 8px 16px 32px;
+    margin-top:20px;
+    padding: 10px 16px;
+}
+.faq_info_ttentionm {
+    margin-bottom:50px;
+    padding: 10px 16px;
 }
 .faq_info ul li{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    border-bottom: 1px solid rgba(0,0,0,0.15);
+}
+.faq_info_ttentionm ul li{
     display: inline-block;
     width: 100%;
     height: 100%;

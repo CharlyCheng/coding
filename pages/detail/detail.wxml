@@ -8,7 +8,7 @@
         autoplay="{{autoplay}}" 
         interval="{{interval}}" 
         duration="{{duration}}">
-        <block wx:for="{{imgUrls}}" wx:key="{{item}}">
+        <block wx:for="{{tradeDetail.thumb_imgs}}" wx:key="{{item}}">
           <swiper-item>
             <image class="swiper_image" src="{{item}}"/>
           </swiper-item>
@@ -17,12 +17,12 @@
     </view>
     <view class='normal_style head_info'>
       <view class="con_head border_bttom">
-        <h1>大阪周游券（关西机场 / Namba Edion领取</h1>
+        <h1>{{tradeDetail.product_name}}</h1>
         <view class='con_head_des'>
-          <h3>游八达岭长城，了解奥林匹克精神</h3>
+          <h3>{{tradeDetail.descriptions}}</h3>
           <view class="price_box">
             <span class="currency">¥</span>
-            <span class="price_now">171</span>
+            <span class="price_now">{{tradeDetail.price}}</span>
             <span class="price_before">177</span>
           </view>
           <view class='price_guarantee'>
@@ -35,12 +35,12 @@
       </view>
       <view class="keynote border_bttom">
         <view class="note_des">
-          <van-icon name="friends-o"></van-icon>
+          <van-icon class="friends_color" name="friends"></van-icon>
           <p>166 人參加过</p>
         </view>
         <view class="note_des">
-          <span class="klook-icon-time"></span>
-          <p class="j_card_date notice">最早可预订日期：明日</p>
+          <van-icon class="friends_color" name="clock"></van-icon>
+          <p class="j_card_date notice">最早可预订日期: {{tradeDetail.start_sell_timestr}}</p>
         </view>
       </view>
       <view class="border_bttom">
@@ -78,7 +78,9 @@
       <view class="high_light_content border_bttom">
         <div class="high_light mark_down">
           <ul>
-              <li wx:for="{{highLightList}}" wx:key="{{index}}">{{item.name}}</li>
+              <li>{{tradeDetail.brighteneddot_first}}</li>
+              <li>{{tradeDetail.brighteneddot_second}}</li>
+              <li>{{tradeDetail.brighteneddot_third}}</li>
           </ul>
         </div>
       </view>
@@ -88,9 +90,9 @@
       <view>
         <div id="pac_info_head" class="block_head">套餐选项</div>
       </view>
-      <view class="pac_info_con" wx:for="{{pacInfoList}}" wx:key="{{index}}">
+      <view class="pac_info_con" wx:for="{{tradeDetail.skus}}" wx:key="{{index}}">
         <view>
-          <view><text class="pac_name">{{item.name}}</text></view>
+          <view><text class="pac_name">{{item.product_item_name}}</text></view>
           <view><text class="pac_date">{{item.date}}</text></view>
         </view>
         <view>
@@ -145,7 +147,7 @@
         <div id="pac_info_head" class="block_head">如何使用</div>
       </view>
       <view class='faq_info'>
-        xxxx
+        {{tradeDetail.usage_method}}
       </view>
     </view>
     <view class="back_gd"></view>
@@ -155,7 +157,7 @@
       </view>
       <view class='ter_con_info'>
         <ul>
-          <li>此活动不受理订单修改、订单取消和退款</li>
+          <li>{{tradeDetail.return_notice}}</li>
         </ul>
       </view>
     </view>
@@ -164,10 +166,9 @@
       <view>
         <div id="pac_info_head" class="block_head">常见问题</div>
       </view>
-      <view class='faq_info'>
+      <view class='faq_info_ttentionm'>
         <ul>
-          <li>活动相关常见问题</li>
-          <li>活动相关常见问题</li>
+          <li>{{tradeDetail.matters_needing_attentionm}}</li>
         </ul>
       </view>
     </view>
@@ -178,11 +179,6 @@
           icon="chat-o"
           text="联系客服"
           bind:click="onClickService"
-        />
-        <van-goods-action-button
-          text="加入购物车"
-          type="warning"
-          bind:click="onClickButton"
         />
         <van-goods-action-button
           text="立即购买"

@@ -1,6 +1,7 @@
 // pages/detail/detail.js
 import Toast from '../../vant/toast/toast';
 import Dialog from '../../vant/dialog/dialog';
+import { tradeDetail } from '../../mock/productDesc'
 
 
 Page({
@@ -9,49 +10,11 @@ Page({
    * 页面的初始数据
    */
   data: {
-    imgUrls: [
-      'https://images.unsplash.com/photo-1551334787-21e6bd3ab135?w=640',
-      'https://images.unsplash.com/photo-1551214012-84f95e060dee?w=640',
-      'https://images.unsplash.com/photo-1551446591-142875a901a1?w=640'
-    ],
+    tradeDetail: {},
     indicatorDots: true,
     autoplay: false,
     interval: 5000,
-    duration: 1000,
-    pacInfoList: [
-      {
-        'name': '普通门票 + 全岛接送',
-        'date': '可定明日',
-        'price': '250',
-      },
-      {
-        'name': '普通门票 + 全岛接送',
-        'date': '可定明日',
-        'price': '250',
-      },
-      {
-        'name': '普通门票 + 全岛接送',
-        'date': '可定明日',
-        'price': '250',
-      }
-    ],
-    highLightList: [
-      {
-        'name': '大阪周游卡一日券/二日券，让你免费进入HEP FIVE摩天轮、梅田蓝天大厦空中庭园展望台、大阪天守阁、通天阁等热门景点',
-      },
-      {
-        'name': '大阪周游卡一日券/二日券，让你免费进入HEP FIVE摩天轮、梅田蓝天大厦空中庭园展望台、大阪天守阁、通天阁等热门景点',
-      },
-      {
-        'name': '大阪周游卡一日券/二日券，让你免费进入HEP FIVE摩天轮、梅田蓝天大厦空中庭园展望台、大阪天守阁、通天阁等热门景点',
-      },
-      {
-        'name': '大阪周游卡一日券/二日券，让你免费进入HEP FIVE摩天轮、梅田蓝天大厦空中庭园展望台、大阪天守阁、通天阁等热门景点',
-      },
-      {
-        'name': '大阪周游卡一日券/二日券，让你免费进入HEP FIVE摩天轮、梅田蓝天大厦空中庭园展望台、大阪天守阁、通天阁等热门景点',
-      },
-    ]
+    duration: 1000
   },
   changeIndicatorDots: function(e) {
     this.setData({
@@ -92,25 +55,33 @@ Page({
   },
   //获取详情页面数据
   getGoodDetail() {
-    wx.request({
-      url: 'test.php',
-      data: {
-        x: '',
-        y: ''
-      },
-      header: {
-        'content-type': 'application/json' // 默认值
-      },
-      success (res) {
-        console.log(res.data)
-      }
+    const url = "http://123.56.123.203:8010/trip-web/v1/product/productDesc";
+    const data = {
+      "product_id": "p105d0c6-76d3-4838-a83f-299835d60b4f",
+      "uuid": "111111"
+    }
+    this.setData({
+      tradeDetail: tradeDetail
     })
+    // wx.request({
+    //   url: url, 
+    //   data: data,
+    //   header: {
+    //     'content-type': 'application/json'
+    //   },
+    //   success (res) {
+    //     const data = res.data
+    //     this.setData({
+    //       tradeDetail: data
+    //     })
+    //   }
+    // })
   },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    
+    this.getGoodDetail()
   },
 
   /**
