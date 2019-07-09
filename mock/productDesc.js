@@ -62,8 +62,16 @@ export const tradeDetail = {
               "item": [
                   {
                       "id": "c0b8ef20-a541-4cad-909b-7ee9ad062df4",
-                      "name": "成人"
-                  }
+                      "name": "成人",
+                      "price": 50,
+                      "stepperNum": 0
+                  },
+                  {
+                    "id": "c0b8ef20-a541-4cad-909b-7ee9ad062df4",
+                    "name": "儿童",
+                    "price": 20,
+                    "stepperNum": 0
+                }
               ]
           },
           {
@@ -72,7 +80,11 @@ export const tradeDetail = {
               "item": [
                   {
                       "id": "0a59ebc3-600f-4625-a0f0-d6335b2be12b",
-                      "name": "VIP座"
+                      "name": "VIP座1"
+                  },
+                  {
+                    "id": "0a59ebc3-600f-4625-a0f0-d6335b2be12b",
+                    "name": "VIP座2"
                   }
               ]
           },
@@ -198,16 +210,16 @@ export const tradeDetail = {
       "status": "0",
       "total_stock": "594",
       "lowfare": 1,
-      "confirm_time": null,
-      "retreat": null,
-      "proof_type": null,
-      "startpeople": 1,
+      "confirm_time": 0,
+      "retreat": 2,
+      "proof_type": 1,
+      "startpeople": 142,
       "early_registration_day": null,
       "latest_place_time": null,
       "brighteneddot_first": "大阪周游卡一日券/二日券，让你免费进入HEP FIVE摩天轮、梅田蓝天大厦空中庭园展望台、大阪天守阁、通天阁等热门景点",
       "brighteneddot_second": "大阪周游卡一日券/二日券，让你免费进入HEP FIVE摩天轮、梅田蓝天大厦空中庭园展望台、大阪天守阁、通天阁等热门景点",
       "brighteneddot_third": "大阪周游卡一日券/二日券，让你免费进入HEP FIVE摩天轮、梅田蓝天大厦空中庭园展望台、大阪天守阁、通天阁等热门景点",
-      "reservation_notes": "1",
+      "reservation_notes": "我是预订须知",
       "usage_method": "我是使用事项",
       "return_notice": "此活动不受理订单修改、订单取消和退款",
       "matters_needing_attentionm": "我是注意事项",

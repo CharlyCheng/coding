@@ -11,6 +11,7 @@ Page({
    */
   data: {
     tradeDetail: {},
+    isShowUserMethod: false,
     indicatorDots: true,
     autoplay: false,
     interval: 5000,
@@ -36,6 +37,18 @@ Page({
       duration: e.detail.value
     })
   },
+  // 关掉close
+  closeDetail() {
+    this.setData({
+      isShowUserMethod: false
+    })
+  },
+  // 开pop
+  openDetail() {
+    this.setData({
+      isShowUserMethod: true
+    })
+  },
   // 客服点击
   onClickService() {
     Toast('点击图标');
@@ -50,9 +63,10 @@ Page({
     });
   },
   // 立即预订点击
-  onClickButton() {
+  onClickButton(event) {
+    const newIndex = event.target.dataset.bookindex || 0
     wx.navigateTo({
-      url: `/pages/bookPage/bookPage`
+      url: `/pages/bookPage/bookPage?comboIndex=${newIndex}`
     })
   },
   //获取详情页面数据
@@ -66,19 +80,19 @@ Page({
     this.setData({
       tradeDetail: tradeDetail
     })
-    wx.request({
-      url: url, 
-      data: data,
-      header: {
-        'content-type': 'application/json'
-      },
-      success (res) {
-        const data = res.data
-        this.setData({
-          tradeDetail: data
-        })
-      }
-    })
+    // wx.request({
+    //   url: url, 
+    //   data: data,
+    //   header: {
+    //     'content-type': 'application/json'
+    //   },
+    //   success (res) {
+    //     const data = res.data
+    //     this.setData({
+    //       tradeDetail: data
+    //     })
+    //   }
+    // })
   },
   /**
    * 生命周期函数--监听页面加载

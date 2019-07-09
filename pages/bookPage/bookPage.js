@@ -1,54 +1,12 @@
 // pages/bookPage/bookPage.js
+import { tradeDetail } from '../../mock/productDesc'
 
 Page({
   /**
    * 页面的初始数据
    */
   data: {
-    comboList: [
-      {
-        'name': '普通门票 + 全岛接送',
-        'date': '下午1点',
-        'price': '250',
-      },
-      {
-        'name': '普通门票 + 全岛接送',
-        'date': '下午2点',
-        'price': '250',
-      },
-      {
-        'name': '普通门票 + 全岛接送',
-        'date': '下午3点',
-        'price': '250',
-      },
-      {
-        'name': '普通门票 + 全岛接送',
-        'date': '下午4点',
-        'price': '250',
-      },
-      {
-        'name': '普通门票 + 全岛接送',
-        'date': '下午5点',
-        'price': '250',
-      },
-      {
-        'name': '普通门票 + 全岛接送',
-        'date': '下午6点',
-        'price': '250',
-      }
-    ],
-    countList: [
-      {
-        'name': '成人',
-        'price': 50,
-        'stepperNum': 0
-      },
-      {
-        'name': '儿童',
-        'price': 20,
-        'stepperNum': 0
-      }
-    ],
+    tradeDetail: {},
     isChooseIndex: 0,
     isSeesionIndex: 0,
     isShowDate: true,
@@ -149,28 +107,43 @@ Page({
     })
   },
   // 请求详情页数据
-  getTradeDetail() {
+  getTradeDetail(options) {
     const url = "http://123.56.123.203:8010/trip-web/v1/product/productDesc";
+    const { product_id = '' } = options
     const data = {
-      "product_id": "p105d0c6-76d3-4838-a83f-299835d60b4f",
+      "product_id": product_id,
       "uuid": "111111"
     }
-    wx.request({
-      url: url, 
-      data: data,
-      header: {
-        'content-type': 'application/json'
-      },
-      success (res) {
-        const data = res.data
-      }
+    this.setData({
+      tradeDetail: tradeDetail
+    })
+    // wx.request({
+    //   url: url, 
+    //   data: data,
+    //   header: {
+    //     'content-type': 'application/json'
+    //   },
+    //   success (res) {
+    //     const data = res.data
+    //     this.setData({
+    //       tradeDetail: data
+    //     })
+    //   }
+    // })
+  },
+  // 选择第几个
+  defaultChooseIndex(options) {
+    const { comboIndex = '' } = options
+    this.setData({
+      isChooseIndex: comboIndex || 0
     })
   },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.getTradeDetail(options)
+    this.defaultChooseIndex(options)
   },
 
   /**

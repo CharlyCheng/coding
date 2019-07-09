@@ -10,21 +10,21 @@
       <view class="bg_btom"></view>
       <view class="book_title">套餐类型</view>
       <view class="book_page_combo">
-        <view class="{{isChooseIndex == index ? 'book_combo_item book_combo_chose': 'book_combo_item'}}" wx:for="{{comboList}}" wx:key="{{index}}" data-comboindex="{{index}}" bindtap="chooseCombo">
+        <view class="{{isChooseIndex == index ? 'book_combo_item book_combo_chose': 'book_combo_item'}}" wx:for="{{tradeDetail.standards[2].item}}" wx:key="{{index}}" data-comboindex="{{index}}" data-comboid="{{item.product_item_id}}" bindtap="chooseCombo">
           <text class="combo_des">{{item.name}}</text>
         </view>
       </view>
       <view class="bg_btom"></view>
       <view class="book_title">场次</view>
       <view class="book_page_session">
-        <view wx:for="{{comboList}}" wx:key="{{index}}">
-          <text data-seesionindex="{{index}}" bindtap="chooseSession" class="{{isSeesionIndex == index ? 'session_btn session_btn_chose': 'session_btn'}}">{{item.date}}</text>
+        <view wx:for="{{tradeDetail.standards[0].item}}" wx:key="{{index}}">
+          <text data-seesionindex="{{index}}" bindtap="chooseSession" class="{{isSeesionIndex == index ? 'session_btn session_btn_chose': 'session_btn'}}">{{item.name}}</text>
         </view>
       </view>
       <view class="bg_btom"></view>
       <view class="book_title">数量</view>
       <view class="book_page_count">
-        <view class="book_count" wx:for="{{countList}}" wx:key="{{index}}">
+        <view class="book_count" wx:for="{{tradeDetail.standards[1].item}}" wx:key="{{index}}">
           <view class="count_left">
             <text class="count_des">{{item.name}}</text>
             <view><text class="count_money">￥{{item.price}}</text></view>
