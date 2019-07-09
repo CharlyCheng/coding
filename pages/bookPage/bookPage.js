@@ -7,6 +7,8 @@ Page({
    */
   data: {
     tradeDetail: {},
+    countList: [],
+    combList: [],
     isChooseIndex: 0,
     isSeesionIndex: 0,
     isShowDate: true,
@@ -81,7 +83,9 @@ Page({
   },
   // 下一步去支付
   bookNextPay() {
-
+    wx.navigateTo({
+      url: `/pages/bookPage/bookPage?comboIndex=${newIndex}`
+    })
   },
   // 打开日期选择
   openSelectDate() {
@@ -114,8 +118,16 @@ Page({
       "product_id": product_id,
       "uuid": "111111"
     }
+    const countList = tradeDetail.standards[1].item || []
+    const combList = tradeDetail.standards[2].item || []
+    const newCountList = countList && countList.map( (item,index) => {
+      item.stepperNum = 0
+      return item
+    })
     this.setData({
-      tradeDetail: tradeDetail
+      tradeDetail: tradeDetail,
+      countList: newCountList,
+      combList: combList
     })
     // wx.request({
     //   url: url, 
