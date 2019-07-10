@@ -108,19 +108,12 @@ Page({
           standardsArr.push(newStr)
         })
         standardsArr.forEach( (item4, index4) => {
-          console.log('====================================');
-          console.log('item4', item4);
-          console.log('====================================');
           skus.forEach((item1, index) => {
             if (item1.attributes == item4) {
               combList.push(item1)
-              return;
             }
           })
         })
-        console.log('====================================');
-        console.log('combList', combList);
-        console.log('====================================');
         that.setData({
           tradeDetail: data,
           combList: combList
