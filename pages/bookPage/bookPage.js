@@ -26,10 +26,13 @@ Page({
   },
   // 选择套餐
   chooseCombo(event) {
-    const newIndex = event.target.dataset.comboindex
+    const newIndex = event.currentTarget.dataset.comboIndex
+    console.log('event.target.dataset', newIndex)
     if (newIndex == this.data.isChooseIndex) {
       return
     }
+    console.log('newIndex', newIndex);
+    
     this.setData({
       isChooseIndex: newIndex || 0
     })
