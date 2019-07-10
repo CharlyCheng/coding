@@ -73,7 +73,7 @@ Page({
     const url = "http://123.56.123.203:8088/trip-web/v1/product/productDesc";
     const { product_id = '' } = options
     const data = {
-      "product_id": product_id || 'p5de0905-9449-4b7d-bbf8-fbcd080f9828',
+      "product_id": product_id || 'p4f7e253-7bd3-4834-a1ad-2f18e9d9582f',
       "uuid": "111111"
     }
     const that = this;
@@ -89,17 +89,34 @@ Page({
         const standards = data.standards || []
         const skus = data.skus || []
         let combList = []
+        let taoCanList = []
+        let standardsArr = []
         let attribute = ''
+        let newTaoCan = ''
         standards.forEach( (item1, index) => {
           const parentId = item1.id
           const childrenItem = item1.item[0]
-          attribute += `${childrenItem ? parentId:''  }:${childrenItem ? childrenItem.id : ''}${index == standards.length - 1 ? '': ';'}`
-        })
-        skus.forEach((item1, index) => {
-          if (item1.attributes == attribute) {
-            combList.push(item1)
-            return;
+          if (item1.id != 'taocan'){
+            attribute += `${childrenItem ? parentId:''  }:${childrenItem ? childrenItem.id : ''}${index == standards.length - 1 ? '': ';'}`
+          } else {
+            taoCanList = item1.item
+            newTaoCan = parentId
           }
+        })
+        taoCanList.forEach((item2, index2) => {
+          let newStr = `${newTaoCan}:${item2.id};${attribute}`
+          standardsArr.push(newStr)
+        })
+        standardsArr.forEach( (item4, index4) => {
+          console.log('====================================');
+          console.log('item4', item4);
+          console.log('====================================');
+          skus.forEach((item1, index) => {
+            if (item1.attributes == item4) {
+              combList.push(item1)
+              return;
+            }
+          })
         })
         console.log('====================================');
         console.log('combList', combList);
