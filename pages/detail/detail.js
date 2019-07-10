@@ -9,6 +9,7 @@ Page({
    */
   data: {
     tradeDetail: {},
+    combList: [],
     isShowUserMethod: false,
     indicatorDots: true,
     autoplay: false,
@@ -85,8 +86,29 @@ Page({
       },
       success (res) {
         const data = res.data && res.data.data || {}
+        const standards = data.standards || []
+        const skus = data.skus || []
+        let combList = []
+        let attribute = ''
+        standards.forEach( (item1, index) => {
+          const parentId = item1.id
+          const childrenItem = item1.item[0]
+          attribute += `${childrenItem ? parentId:''  }:${childrenItem ? childrenItem.id : ''}${index == standards.length - 1 ? '': ';'}`
+        })
+        console.log('====================================');
+        console.log('attribute', attribute);
+        console.log('====================================');
+        skus.forEach((item1, index) => {
+          if (item1.attributes == attribute) {
+            combList.push(item1)
+          }
+        })
+        console.log('====================================');
+        console.log('combList', combList);
+        console.log('====================================');
         that.setData({
-          tradeDetail: data
+          tradeDetail: data,
+          combList: combList
         })
       }
     })

@@ -1,5 +1,6 @@
 // pages/bookPage/bookPage.js
 import { tradeDetail } from '../../mock/productDesc'
+import { enableArea, enableDays } from '../../component/calendar/main';
 
 Page({
   /**
@@ -118,6 +119,7 @@ Page({
       "product_id": product_id,
       "uuid": "111111"
     }
+    enableDays(['2019-7-4', '2019-7-12']);
     const countList = tradeDetail.standards[1].item || []
     const combList = tradeDetail.standards[2].item || []
     const newCountList = countList && countList.map( (item,index) => {

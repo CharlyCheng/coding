@@ -302,6 +302,21 @@ li {
     padding: 16px;
     position: relative;
 }
+.hot_image {
+    width: 14px;
+    height: 14px;
+    border-radius: 2px;
+}
+.pac_info_left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.pac_info_tc_des {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+}
 .pac_info_right {
     width: 24px;
     height: 24px;
@@ -367,6 +382,36 @@ li {
 .book_info {
     
 }
+.book_info .additional {
+    margin: 0 16px 8px;
+    border-radius: 2px;
+    background-color: #fffbf2;
+    border: solid 1px #ffe6c2;
+    padding: 16px 16px;
+}
+.book_info .additional h4 {
+    color: #ffa628;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.25;
+    position: relative;
+    margin-bottom: 16px;
+    padding-top: 8px;
+}
+.book_info .additional .has_style_rich {
+    margin-top: 8px;
+}
+.book_info .additional h4::before {
+    content: "i";
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
+    background-color: #ffa628;
+    display: inline-block;
+    margin-right: 8px;
+    color: white;
+    text-align: center;
+}
 .book_des_info {
     margin-top:20px;
     padding: 10px 16px;
@@ -375,6 +420,7 @@ li {
     margin-top: 6px;
     padding: 8px;
     position: relative;
+    overflow: hidden;
 }
 .desc_con {
     line-height: 21px;

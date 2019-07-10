@@ -40,7 +40,7 @@
         </view>
         <view class="note_des">
           <van-icon class="friends_color" name="clock"></van-icon>
-          <p class="j_card_date notice">最早可预订日期: {{tradeDetail.start_sell_timestr}}</p>
+          <p class="j_card_date notice">最早可预订日期: {{tradeDetail.earliest_place_date}}</p>
         </view>
       </view>
       <view class="border_bttom">
@@ -98,10 +98,15 @@
       <view>
         <div id="pac_info_head" class="block_head">套餐选项</div>
       </view>
-      <view class="pac_info_con border_bttom" wx:for="{{tradeDetail.skus}}" wx:key="{{index}}">
-        <view>
-          <view><text class="pac_name">{{item.product_item_name}}</text></view>
-          <view><text class="pac_date">{{item.date}}</text></view>
+      <view class="pac_info_con border_bttom" wx:for="{{combList}}" wx:key="{{index}}">
+        <view class="pac_info_left">
+          <view class='pac_info_tc_des'>
+            <image class='hot_image' src="{{item.product_item_image}}"></image>
+            <text class="pac_name">{{item.product_item_name}}</text>
+          </view>
+          <view>
+            <text class="pac_date">{{item.product_item_name}}</text>
+          </view>
         </view>
         <view>
           <div><span class="pac_price">￥{{item.price}}元</span>起</div>
@@ -140,7 +145,13 @@
         <div id="pac_info_head" class="block_head">预定须知</div>
       </view>
       <view class='book_des_info'>
-        {{tradeDetail.reservation_notes}}
+        <rich-text type="text" nodes="{{tradeDetail.reservation_notes}}"></rich-text>
+        <view class="additional">
+          <view>
+              <h4 class="has_style">注意事项：</h4>
+              <rich-text class="has_style_rich" type="text" nodes="{{tradeDetail.matters_needing_attentionm}}"></rich-text>
+          </view>
+        </view>
       </view>
     </view>
     <view class="back_gd"></view>
@@ -149,7 +160,7 @@
         <div id="pac_info_head" class="block_head">如何使用</div>
       </view>
       <view class='faq_info'>
-        {{tradeDetail.usage_method}}
+        <rich-text type="text" nodes="{{tradeDetail.usage_method}}"></rich-text>
       </view>
     </view>
     <view class="back_gd"></view>
@@ -164,7 +175,7 @@
       </view>
     </view>
     <view class="back_gd"></view>
-    <view class="normal_style pac_info faq">
+    <!-- <view class="normal_style pac_info faq">
       <view>
         <div id="pac_info_head" class="block_head">常见问题</div>
       </view>
@@ -173,7 +184,7 @@
           <li bindtap="openDetail">{{tradeDetail.matters_needing_attentionm}}</li>
         </ul>
       </view>
-    </view>
+    </view> -->
     <!-- 立即预定 -->
     <view>
       <van-goods-action>
