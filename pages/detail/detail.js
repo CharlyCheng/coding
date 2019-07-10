@@ -1,8 +1,6 @@
 // pages/detail/detail.js
 import Toast from '../../vant/toast/toast';
 import Dialog from '../../vant/dialog/dialog';
-import { tradeDetail } from '../../mock/productDesc'
-
 
 Page({
 
@@ -71,28 +69,27 @@ Page({
   },
   //获取详情页面数据
   getGoodDetail(options) {
-    const url = "http://123.56.123.203:8010/trip-web/v1/product/productDesc";
+    const url = "http://123.56.123.203:8088/trip-web/v1/product/productDesc";
     const { product_id = '' } = options
     const data = {
-      "product_id": product_id,
+      "product_id": product_id || 'p5de0905-9449-4b7d-bbf8-fbcd080f9828',
       "uuid": "111111"
     }
-    this.setData({
-      tradeDetail: tradeDetail
+    const that = this;
+    wx.request({
+      url: url, 
+      data: data,
+      method: 'POST',
+      header: {
+        'content-type': 'application/json'
+      },
+      success (res) {
+        const data = res.data && res.data.data || {}
+        that.setData({
+          tradeDetail: data
+        })
+      }
     })
-    // wx.request({
-    //   url: url, 
-    //   data: data,
-    //   header: {
-    //     'content-type': 'application/json'
-    //   },
-    //   success (res) {
-    //     const data = res.data
-    //     this.setData({
-    //       tradeDetail: data
-    //     })
-    //   }
-    // })
   },
   /**
    * 生命周期函数--监听页面加载

@@ -19,7 +19,7 @@
       <view class="con_head border_bttom">
         <h1>{{tradeDetail.product_name}}</h1>
         <view class='con_head_des'>
-          <h3>{{tradeDetail.descriptions}}</h3>
+          <!-- <h3>{{tradeDetail.descriptions}}</!-->
           <view class="price_box">
             <span class="currency">¥</span>
             <span class="price_now">{{tradeDetail.price}}</span>
@@ -34,9 +34,9 @@
         </view>
       </view>
       <view class="keynote border_bttom">
-        <view class="note_des">
+        <view class="note_des" wx:if="{{tradeDetail.sales != -1}}">
           <van-icon class="friends_color" name="friends"></van-icon>
-          <p>{{tradeDetail.startpeople}}人參加过</p>
+          <p>{{tradeDetail.sales}}人参加过</p>
         </view>
         <view class="note_des">
           <van-icon class="friends_color" name="clock"></van-icon>
@@ -98,7 +98,7 @@
       <view>
         <div id="pac_info_head" class="block_head">套餐选项</div>
       </view>
-      <view class="pac_info_con" wx:for="{{tradeDetail.skus}}" wx:key="{{index}}">
+      <view class="pac_info_con border_bttom" wx:for="{{tradeDetail.skus}}" wx:key="{{index}}">
         <view>
           <view><text class="pac_name">{{item.product_item_name}}</text></view>
           <view><text class="pac_date">{{item.date}}</text></view>
@@ -131,13 +131,7 @@
         <div id="pac_info_head" class="block_head">活动详情</div>
       </view>
       <view class='act_info_top'>
-        <text class="desc_con">
-          作为和东京迪士尼公园齐名的游乐园，去大阪旅游更不能错过！ ！日本环球影城，一日券门票让您畅游尽情享受酷炫魔法的哈利波特禁忌之旅，体验2018年刚开幕的小小兵乐园，让你近距离接触小小兵一起游玩，搭乘世界最大360度的云霄飞车飞天翼龙。当然少不了水上乐施包含有热带雨林丛生的侏㑩纪公园探险、跟着船长一起去猎杀大白鲨，，作为动漫大国的日本，本土的动漫大赏更是少不了Cool Japan动漫系列。惊奇好玩的游乐设施更是让小朋友惊喜连连，多项游乐设施等你来挑战。购买大阪环球影城门票，一日券让您畅游尽情享受
-        </text>
-        <view class="desc_img">
-          <image class="desc_image" src="https://res.klook.com/images/fl_lossy.progressive,q_65/c_fill,w_1295,h_720,f_auto/w_80,x_15,y_15,g_south_west,l_klook_water/activities/efrleravwhb5gj5og1xz/日本环球影城™1日电子门票.jpg" />
-          <text class="img_desc">日本环球影城®，2017年全新开幕小小兵乐园</text>
-        </view>
+        <rich-text type="text" nodes="{{tradeDetail.descriptions}}"></rich-text>
       </view>
     </view>
     <view class="back_gd"></view>
