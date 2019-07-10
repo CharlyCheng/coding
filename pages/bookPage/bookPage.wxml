@@ -11,14 +11,17 @@
       <view class="book_title">套餐类型</view>
       <view class="book_page_combo">
         <view class="{{isChooseIndex == index ? 'book_combo_item book_combo_chose': 'book_combo_item'}}" wx:for="{{combList}}" wx:key="{{index}}" data-comboindex="{{index}}" data-comboid="{{item.product_item_id}}" bindtap="chooseCombo">
-          <text class="combo_des">{{item.name}}</text>
+          <image wx:if="{{item.product_item_image}}" class='hot_image' src="{{item.product_item_image}}"></image>
+          <text class="combo_des">{{item.product_item_name}}</text>
         </view>
       </view>
       <view class="bg_btom"></view>
-      <view class="book_title">场次</view>
-      <view class="book_page_session">
-        <view wx:for="{{tradeDetail.standards[0].item}}" wx:key="{{index}}">
-          <text data-seesionindex="{{index}}" bindtap="chooseSession" class="{{isSeesionIndex == index ? 'session_btn session_btn_chose': 'session_btn'}}">{{item.name}}</text>
+      <view wx:if="{{changciList && changciList.length >=1}}">
+        <view class="book_title">场次</view>
+        <view class="book_page_session">
+          <view wx:for="{{changciList}}" wx:key="{{index}}">
+            <text data-seesionindex="{{index}}" bindtap="chooseSession" class="{{isSeesionIndex == index ? 'session_btn session_btn_chose': 'session_btn'}}">{{item.name}}</text>
+          </view>
         </view>
       </view>
       <view class="bg_btom"></view>

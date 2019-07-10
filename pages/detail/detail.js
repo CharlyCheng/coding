@@ -95,12 +95,10 @@ Page({
           const childrenItem = item1.item[0]
           attribute += `${childrenItem ? parentId:''  }:${childrenItem ? childrenItem.id : ''}${index == standards.length - 1 ? '': ';'}`
         })
-        console.log('====================================');
-        console.log('attribute', attribute);
-        console.log('====================================');
         skus.forEach((item1, index) => {
           if (item1.attributes == attribute) {
             combList.push(item1)
+            return;
           }
         })
         console.log('====================================');

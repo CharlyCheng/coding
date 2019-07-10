@@ -31,8 +31,17 @@
 }
 .combo_des {
   width: 100%;
+  margin-right: 4px;
+}
+.hot_image {
+  width: 14px;
+  height: 14px;
+  border-radius: 2px;
+  margin-right: 4px;
 }
 .book_combo_item {
+  display: flex;
+  align-items: center;
   height: 30px;
   background: #eee;
   margin-bottom: 14px;
@@ -163,4 +172,5 @@
 }
 .van-popup--bottom {
   height: 100%!important;
+  width:101%!important;
 }

@@ -442,8 +442,9 @@ li {
 }
 
 .ter_con{
-    margin-top: 8px;
     padding-top: 16px;
+    margin-top: 8px;
+    margin-bottom: 45px;
     background-color: #fff;
 }
 .ter_con_info {

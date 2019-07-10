@@ -10,6 +10,7 @@ Page({
     tradeDetail: {},
     countList: [],
     combList: [],
+    changciList: [],
     isChooseIndex: 0,
     isSeesionIndex: 0,
     isShowDate: true,
@@ -111,39 +112,76 @@ Page({
       selectDateTimer: selectDate 
     })
   },
-  // 请求详情页数据
+  //获取详情页面数据
   getTradeDetail(options) {
-    const url = "http://123.56.123.203:8010/trip-web/v1/product/productDesc";
+    const url = "http://123.56.123.203:8088/trip-web/v1/product/productDesc";
     const { product_id = '' } = options
     const data = {
-      "product_id": product_id,
+      "product_id": product_id || 'p5de0905-9449-4b7d-bbf8-fbcd080f9828',
       "uuid": "111111"
     }
-    enableDays(['2019-7-4', '2019-7-12']);
-    const countList = tradeDetail.standards[1].item || []
-    const combList = tradeDetail.standards[2].item || []
-    const newCountList = countList && countList.map( (item,index) => {
-      item.stepperNum = 0
-      return item
+    const that = this;
+    wx.request({
+      url: url, 
+      data: data,
+      method: 'POST',
+      header: {
+        'content-type': 'application/json'
+      },
+      success (res) {
+        const data = res.data && res.data.data || {}
+        const standards = data.standards || []
+        const skus = data.skus || []
+        let combList = []
+        let changciList = []
+        let countList = []
+        let riqiArr = []
+        let riqiEnableDay = []
+        let attribute = ''
+        let attributes = []
+        standards.forEach( (item1, index) => {
+          const parentId = item1.id
+          const childrenItem = item1.item[0]
+          attribute += `${childrenItem ? parentId:''  }:${childrenItem ? childrenItem.id : ''}${index == standards.length - 1 ? '': ';'}`
+          if (parentId == 'riqi') {
+            riqiArr = item1.item
+          }
+          if (parentId == 'changci') {
+            changciList = item1.item
+          }
+          if (parentId == 'shuliang') {
+            countList = item1.item
+          }
+        })
+        skus.forEach((item1, index) => {
+          if (item1.attributes == attribute) {
+            combList.push(item1)
+          }
+        })
+        riqiArr.forEach((item1, index) => {
+          if (item1.id) {
+            riqiEnableDay.push(item1.id)
+          }
+        })
+        console.log('====================================');
+        console.log('combList', combList);
+        console.log('====================================');
+        // countList.map((item,index) => {
+        //   item.stepperNum = 0;
+        //   item.price = combList[index].price
+        // })
+        console.log('====================================');
+        console.log('countList', countList);
+        console.log('====================================');
+        enableDays(riqiEnableDay)
+        that.setData({
+          tradeDetail: data,
+          combList: combList,
+          countList: countList,
+          changciList: changciList
+        })
+      }
     })
-    this.setData({
-      tradeDetail: tradeDetail,
-      countList: newCountList,
-      combList: combList
-    })
-    // wx.request({
-    //   url: url, 
-    //   data: data,
-    //   header: {
-    //     'content-type': 'application/json'
-    //   },
-    //   success (res) {
-    //     const data = res.data
-    //     this.setData({
-    //       tradeDetail: data
-    //     })
-    //   }
-    // })
   },
   // 选择第几个
   defaultChooseIndex(options) {

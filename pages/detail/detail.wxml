@@ -34,7 +34,7 @@
         </view>
       </view>
       <view class="keynote border_bttom">
-        <view class="note_des" wx:if="{{tradeDetail.sales != -1}}">
+        <view class="note_des" wx:if="{{tradeDetail.sales && tradeDetail.sales != -1}}">
           <van-icon class="friends_color" name="friends"></van-icon>
           <p>{{tradeDetail.sales}}人参加过</p>
         </view>
